@@ -1,0 +1,360 @@
+- [info, run, start, {"software": "Waiwera version 1.2.1"}]
+- [info, run, start, {"software": "PETSc version 3.13.2"}]
+- [info, run, start, {"compiler": "GCC version 8.3.0"}]
+- [info, run, start, {"num_processors": 1}]
+
+- [info, simulation, init, {"wall_time": "20210503 225013.380 +0000"}]
+
+- [info, input, default, {"logfile.filename": "boxm.yaml"}]
+- [info, input, default, {"output.filename": "boxm.h5"}]
+- [info, input, default, {"eos.primary.scale.pressure": 0.100000E+07}]
+- [info, input, default, {"permeability_angle": 0.000000E+00}]
+- [info, input, default, {"gravity": 0.000000E+00}]
+- [info, input, default, {"rock.types[0].name": ""}]
+- [info, input, default, {"mesh.rebalance": F}]
+- [info, input, default, {"rock.relative_permeability.type": "Linear"}]
+- [info, input, default, {"rock.relative_permeability.liquid": "[0.000000E+00,...]"}]
+- [info, input, default, {"rock.relative_permeability.vapour": "[0.000000E+00,...]"}]
+- [info, input, default, {"rock.capillary_pressure.type": "zero"}]
+- [info, input, default, {"rock.types[0].name": ""}]
+- [info, input, default, {"rock.types[0].wet_conductivity": 0.250000E+01}]
+- [info, input, default, {"rock.types[0].dry_conductivity": 0.250000E+01}]
+- [info, input, default, {"rock.types[0].specific_heat": 0.100000E+04}]
+- [info, input, default, {"output.fields.fluid": "[pressure,...]"}]
+- [info, input, default, {"output.fields.source": "[component,...]"}]
+- [info, input, default, {"time.step.solver.nonlinear.tolerance.update.relative": 0.100000E-09}]
+- [info, input, default, {"time.step.solver.nonlinear.tolerance.update.absolute": 0.100000E+01}]
+- [info, input, default, {"time.step.solver.nonlinear.minimum.iterations": 0}]
+- [info, input, default, {"time.step.solver.linear.type": "bcgs"}]
+- [info, input, default, {"time.step.solver.linear.tolerance.relative": "PETSc_default"}]
+- [info, input, default, {"time.step.solver.linear.maximum.iterations": "PETSc_default"}]
+- [info, input, default, {"time.step.solver.linear.preconditioner.type": "asm"}]
+- [info, input, default, {"time.step.solver.linear.preconditioner.sub.preconditioner.type": "ilu"}]
+- [info, input, default, {"time.step.solver.linear.preconditioner.sub.preconditioner.factor.levels": 0}]
+- [info, input, default, {"time.step.stop.size.minimum": "null"}]
+- [info, input, default, {"time.step.stop.size.maximum": "null"}]
+- [info, input, default, {"time.step.maximum.tries": 10}]
+- [info, input, default, {"output.frequency": 1}]
+- [info, input, default, {"output.checkpoint": "none"}]
+- [info, input, default, {"output.initial": T}]
+- [info, input, default, {"output.final": T}]
+
+- [info, input, summary, {"input.filename": "boxm.json"}]
+- [info, input, summary, {"title": "simple reservoir model, version 1"}]
+- [info, input, summary, {"logfile.filename": "boxm.yaml"}]
+- [info, input, summary, {"output.filename": "boxm.h5"}]
+- [info, input, summary, {"mesh.filename": "gproblem1.msh"}]
+- [info, input, summary, {"eos.name": "w"}]
+- [info, input, summary, {"thermodynamics": "IFC-67"}]
+- [info, input, summary, {"time.step.method": "Backward Euler"}]
+- [info, input, summary, {"time.step.solver.linear.type": "bcgs"}]
+- [info, input, summary, {"time.step.solver.linear.preconditioner.type": "asm"}]
+
+- [info, simulation, dof, {"total": 40, "min": 40, "max": 40, "imbalance": 0.000000E+00}]
+- [info, simulation, sources, {"count": 1}]
+
+- [info, timestepper, start, {"time": 0.000000E+00, "wall_time": "20210503 225013.469 +0000"}]
+
+- [info, timestep, start, {"count": 1, "size": 0.360000E+04}]
+- [info, nonlinear_solver, iteration, {"count": 1, "linear_solver_iterations": 1, "cell": 0, "equation": 1, "residual": 0.361464E-02}]
+- [info, nonlinear_solver, end, {"iterations": 1, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.360000E+04, "time": 0.360000E+04, "status": "increase"}]
+
+- [info, timestep, start, {"count": 2, "size": 0.720000E+04}]
+- [info, nonlinear_solver, iteration, {"count": 1, "linear_solver_iterations": 1, "cell": 0, "equation": 1, "residual": 0.149345E-02}]
+- [info, nonlinear_solver, end, {"iterations": 1, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.720000E+04, "time": 0.108000E+05, "status": "increase"}]
+
+- [info, timestep, start, {"count": 3, "size": 0.144000E+05}]
+- [info, nonlinear_solver, iteration, {"count": 1, "linear_solver_iterations": 1, "cell": 0, "equation": 1, "residual": 0.751266E-03}]
+- [info, nonlinear_solver, end, {"iterations": 1, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.144000E+05, "time": 0.252000E+05, "status": "increase"}]
+
+- [info, timestep, start, {"count": 4, "size": 0.288000E+05}]
+- [info, nonlinear_solver, iteration, {"count": 1, "linear_solver_iterations": 1, "cell": 0, "equation": 1, "residual": 0.529543E-03}]
+- [info, nonlinear_solver, end, {"iterations": 1, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.288000E+05, "time": 0.540000E+05, "status": "increase"}]
+
+- [info, timestep, start, {"count": 5, "size": 0.576000E+05}]
+- [info, nonlinear_solver, iteration, {"count": 1, "linear_solver_iterations": 1, "cell": 0, "equation": 1, "residual": 0.455299E-03}]
+- [info, nonlinear_solver, end, {"iterations": 1, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.576000E+05, "time": 0.111600E+06, "status": "increase"}]
+
+- [info, timestep, start, {"count": 6, "size": 0.115200E+06}]
+- [info, nonlinear_solver, iteration, {"count": 1, "linear_solver_iterations": 1, "cell": 0, "equation": 1, "residual": 0.425432E-03}]
+- [info, nonlinear_solver, end, {"iterations": 1, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.115200E+06, "time": 0.226800E+06, "status": "increase"}]
+
+- [info, timestep, start, {"count": 7, "size": 0.230400E+06}]
+- [info, nonlinear_solver, iteration, {"count": 1, "linear_solver_iterations": 1, "cell": 0, "equation": 1, "residual": 0.408669E-03}]
+- [info, nonlinear_solver, end, {"iterations": 1, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.230400E+06, "time": 0.457200E+06, "status": "increase"}]
+
+- [info, timestep, start, {"count": 8, "size": 0.460800E+06}]
+- [info, nonlinear_solver, iteration, {"count": 1, "linear_solver_iterations": 1, "cell": 0, "equation": 1, "residual": 0.373482E-03}]
+- [info, nonlinear_solver, end, {"iterations": 1, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.460800E+06, "time": 0.918000E+06, "status": "increase"}]
+
+- [info, timestep, start, {"count": 9, "size": 0.921600E+06}]
+- [info, nonlinear_solver, iteration, {"count": 1, "linear_solver_iterations": 1, "cell": 0, "equation": 1, "residual": 0.276207E-03}]
+- [info, nonlinear_solver, end, {"iterations": 1, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.921600E+06, "time": 0.183960E+07, "status": "increase"}]
+
+- [info, timestep, start, {"count": 10, "size": 0.184320E+07}]
+- [info, nonlinear_solver, iteration, {"count": 1, "linear_solver_iterations": 1, "cell": 0, "equation": 1, "residual": 0.136820E-03}]
+- [info, nonlinear_solver, end, {"iterations": 1, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.184320E+07, "time": 0.368280E+07, "status": "increase"}]
+
+- [info, timestep, start, {"count": 11, "size": 0.368640E+07}]
+- [info, nonlinear_solver, iteration, {"count": 1, "linear_solver_iterations": 1, "cell": 0, "equation": 1, "residual": 0.396474E-04}]
+- [info, nonlinear_solver, end, {"iterations": 1, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.368640E+07, "time": 0.736920E+07, "status": "increase"}]
+
+- [info, timestep, start, {"count": 12, "size": 0.737280E+07}]
+- [info, nonlinear_solver, iteration, {"count": 1, "linear_solver_iterations": 1, "cell": 0, "equation": 1, "residual": 0.622814E-05}]
+- [info, nonlinear_solver, end, {"iterations": 1, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.737280E+07, "time": 0.147420E+08, "status": "increase"}]
+
+- [info, timestep, start, {"count": 13, "size": 0.147456E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.147456E+08, "time": 0.294876E+08, "status": "increase"}]
+
+- [info, timestep, start, {"count": 14, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.461876E+08, "status": "increase"}]
+
+- [info, timestep, start, {"count": 15, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.628876E+08, "status": "increase"}]
+
+- [info, timestep, start, {"count": 16, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.795876E+08, "status": "increase"}]
+
+- [info, timestep, start, {"count": 17, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.962876E+08, "status": "increase"}]
+
+- [info, timestep, start, {"count": 18, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.112988E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 19, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.129688E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 20, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.146388E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 21, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.163088E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 22, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.179788E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 23, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.196488E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 24, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.213188E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 25, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.229888E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 26, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.246588E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 27, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.263288E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 28, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.279988E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 29, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.296688E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 30, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.313388E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 31, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.330088E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 32, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.346788E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 33, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.363488E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 34, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.380188E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 35, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.396888E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 36, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.413588E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 37, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.430288E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 38, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.446988E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 39, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.463688E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 40, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.480388E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 41, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.497088E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 42, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.513788E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 43, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.530488E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 44, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.547188E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 45, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.563888E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 46, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.580588E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 47, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.597288E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 48, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.613988E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 49, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.630688E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 50, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.647388E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 51, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.664088E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 52, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.680788E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 53, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.697488E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 54, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.714188E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 55, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.730888E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 56, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.747588E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 57, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.764288E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 58, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.780988E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 59, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.797688E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 60, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.814388E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 61, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.831088E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 62, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.847788E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 63, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.864488E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 64, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.881188E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 65, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.897888E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 66, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.914588E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 67, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.931288E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 68, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.947988E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 69, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.964688E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 70, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.981388E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 71, "size": 0.167000E+08}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.167000E+08, "time": 0.998088E+09, "status": "increase"}]
+
+- [info, timestep, start, {"count": 72, "size": 0.167000E+08}]
+- [info, timestep, end_time_reached, {"size": 0.191240E+07}]
+- [info, nonlinear_solver, end, {"iterations": 0, "converged": T, "reason": "function_relative"}]
+- [info, timestep, end, {"tries": 1, "size": 0.191240E+07, "time": 0.100000E+10, "status": "final"}]
+
+- [info, timestepper, end, {"elapsed_seconds": 0.181100E+01, "wall_time": "20210503 225015.282 +0000"}]
+- [info, simulation, destroy, {"elapsed_seconds": 0.190300E+01, "wall_time": "20210503 225015.283 +0000"}]

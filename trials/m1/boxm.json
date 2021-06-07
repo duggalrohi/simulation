@@ -1,0 +1,125 @@
+{
+  "boundaries": [
+    {
+      "faces": {
+        "cells": [
+          39
+        ],
+        "normal": [
+          1.0,
+          0.0
+        ]
+      },
+      "primary": [
+        360e5,
+        18.5
+      ],
+      "region": 1
+    }
+  ],
+  "eos": {
+    "name": "w",
+    "temperature": 18.5
+  },
+  "initial": {
+    "primary": 360e5,
+    "region": 1
+  },
+  "mesh": {
+    "filename": "gproblem1.msh",
+    "radial": true,
+    "zones": { "all": { "type": "box" } }
+  },
+  "rock": {
+    "types": [
+      {
+        "permeability": [ 1.2e-14, 1.2e-14 ],
+        "porosity": 0.05,
+        "density": 2500.0,
+        "cells": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39
+        ]
+      }
+    ]
+  },
+  "source": [
+    {
+      "cell": 0,
+      "rate": -10
+    }
+  ],
+  "thermodynamics": "ifc67",
+  "time": {
+    "start": 0.0,
+    "step": {
+      "adapt": {
+        "amplification": 2.0,
+        "maximum": 8.0,
+        "method": "iteration",
+        "minimum": 5.0,
+        "on": true,
+        "reduction": 0.2
+      },
+      "maximum": {
+        "number": 500,
+        "size": 16700000.0
+      },
+      "method": "beuler",
+      "size": 3.6e3,
+      "solver": {
+        "nonlinear": {
+          "tolerance": {
+            "function": {
+              "relative": 1e-06,
+              "absolute": 1.0
+            }
+          },
+          "maximum": {
+            "iterations": 8
+          }
+        }
+      }
+    },
+    "stop": 1e9
+  },
+  "title": "simple reservoir model, version 1"
+}

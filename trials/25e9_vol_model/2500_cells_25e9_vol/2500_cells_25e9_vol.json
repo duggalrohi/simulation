@@ -1,0 +1,80 @@
+{
+
+  "title": "simple reservoir model, version 1",
+
+
+  "mesh": {
+    "filename": "2500_cells_25e9_vol.msh",
+    "zones": {
+      "all": {
+        "type": "box"
+      }
+    }
+  },
+
+
+  "thermodynamics": "ifc67",
+  "eos": { "name": "w" },
+  "gravity": null,
+
+  "initial": {
+    "primary": [ 50e5, 140.0 ],
+    "region": 1
+  },
+
+  "rock": {
+    "types": [
+      {
+        "name": "sand",
+        "permeability": [ 1.2e-14, 1.2e-14, 1.2e-14 ],
+        "porosity": 0.2,
+        "density": 2650,
+        "specific_heat": 1000,
+        "wet_conductivity": 2,
+        "dry_conductivity": 2
+      }
+    ]
+  },
+
+  "source": [
+    {
+      "cell": 1250,
+      "rate": -100
+    }
+  ], 
+  "time": {
+    "start": 0.0, 
+    "step": {
+      "size": 3600, 
+      "adapt": {
+        "on": true, 
+        "reduction": 0.2, 
+        "amplification": 2.0, 
+        "minimum": 5.0, 
+        "method": "iteration", 
+        "maximum": 8.0
+      }, 
+      "solver": {
+        "nonlinear": {
+          "tolerance": {
+            "function": {
+              "relative": 1e-9, 
+              "absolute": null
+            }
+          }, 
+          "maximum": {
+            "iterations": 8
+          }
+        }
+      }, 
+      "maximum": {
+        "number": 50, 
+        "size": 86400
+      }, 
+      "method": "beuler"
+    }, 
+    "stop": 864000.0
+  }
+
+
+}

@@ -1,0 +1,70 @@
+{
+  "boundaries": [],
+  "initial": {
+    "region": 1,
+    "primary": [
+      50.0e5, 140.0
+    ]
+  },
+  "title": "one cell", 
+  "time": {
+    "start": 0.0, 
+    "step": {
+      "size": 3600, 
+      "adapt": {
+        "on": true, 
+        "reduction": 0.2, 
+        "amplification": 2.0, 
+        "minimum": 5.0, 
+        "method": "iteration", 
+        "maximum": 8.0
+      }, 
+      "solver": {
+        "nonlinear": {
+          "tolerance": {
+            "function": {
+              "relative": 1e-9, 
+              "absolute": null
+            }
+          }, 
+          "maximum": {
+            "iterations": 8
+          }
+        }
+      }, 
+      "maximum": {
+        "number": 1000, 
+        "size": 86400
+      }, 
+      "method": "beuler"
+    }, 
+    "stop": 864000.0
+  },
+  "gravity": null,
+  "eos": {
+    "name": "w", "temperature": 140.0
+  },
+  "thermodynamics": "ifc67",
+  "mesh": {
+    "filename": "one_cell_1e7_vol_onur2008.msh",
+    "thickness": 1000.0
+  },
+  "source": [
+    {
+      "cell": 0,
+      "rate": -5
+    }
+  ],
+  "rock": {
+    "types": [
+      {
+        "cells": [
+          0
+        ],
+        "density": 2650.0,
+        "porosity": 0.2,
+        "specific_heat":1000
+      }
+    ]
+  }
+}
