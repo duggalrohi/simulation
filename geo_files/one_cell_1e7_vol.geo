@@ -3,8 +3,8 @@
 
 Nx = 2; //number of mesh divisions
 Rx = 1; //growth rate of the mesh divisions
-xdim = 5000; //dimension x-dirn
-ydim = 5000; //dimension y-dirn
+xdim = 100; //dimension x-dirn
+ydim = 100; //dimension y-dirn
 zdim = 1000; //dimension z-dirn
 mshdim = 1; //point mesh size
 

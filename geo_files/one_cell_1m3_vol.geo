@@ -3,9 +3,9 @@
 
 Nx = 2; //number of mesh divisions
 Rx = 1; //growth rate of the mesh divisions
-xdim = 5000; //dimension x-dirn
-ydim = 5000; //dimension y-dirn
-zdim = 1000; //dimension z-dirn
+xdim = 1; //dimension x-dirn
+ydim = 1; //dimension y-dirn
+zdim = 1; //dimension z-dirn
 mshdim = 1; //point mesh size
 
 //points for the reservoir boundary
@@ -21,10 +21,7 @@ Line(3) = {3, 4};
 Line(4) = {4, 1}; 
 
 //dividing lines into elements
-Transfinite Curve {1} = Nx Using Progression Rx;
-Transfinite Curve {2} = Nx Using Progression Rx;
-Transfinite Curve {3} = Nx Using Progression Rx;
-Transfinite Curve {4} = Nx Using Progression Rx;
+Transfinite Curve {1,2,3,4} = Nx Using Progression Rx;
 
 //surface for the reservoir
 Curve Loop(1) = {1, 2, 3, 4};
@@ -38,6 +35,6 @@ Recombine Surface {1};
 
 Physical Surface("reservoir surface", 1) = {1};
 //depth of the reservoir
-//Extrude {0, 0, zdim} {Surface{1}; Curve{8}; Curve{5}; Curve{6}; Curve{7}; Point{1}; Point{2}; Point{3}; Point{4}; Layers{1}; Recombine;}
+//Extrude {0, 0, zdim} {Surface{1}; Layers{1}; Recombine;}
 
 //Physical Volume("reservoir", 31) = {1};
