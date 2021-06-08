@@ -6,7 +6,7 @@
     "gravity": 0, 
     "initial": {
       "primary": [
-        8500000, 
+        8587708.3, 
         0.01
       ], 
       "region": 4
@@ -43,7 +43,7 @@
         }, 
         "method": "beuler"
       }, 
-      "stop": 1261440000.0
+      "stop": 1151852400.0
     }, 
     "thermodynamics": "ifc67", 
     "mesh": { 
@@ -192,6 +192,7 @@
           "porosity": 0.01, 
           "permeability": [
             6e-15, 
+            6e-15,
             6e-15
           ], 
           "wet_conductivity": 1.0, 
