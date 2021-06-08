@@ -1,10 +1,10 @@
 // Inputs
-x=1; //m
-y=1;
-z=10; 
+x=500; //m
+y=500;
+z=-305; 
 ElementSize=1;
-MeshLayers = 2;z
-nodes = 2; //required number of elements - 1, i.e., it is number of nodes
+MeshLayers = 1;
+nodes = 11; //required number of elements - 1, i.e., it is number of nodes
 inc = 1; //increment factor of mesh divisions
  
 // Geometry
@@ -23,8 +23,8 @@ Plane Surface(1) = {1};
 Transfinite Curve {1,2,3,4} = nodes Using Progression inc;
 Transfinite Surface {1};
 Recombine Surface {1};
-Physical Surface("r", 5) = {1};
+//Physical Surface("r", 5) = {1};
  
-//Extrude {0, 0, z} {Surface{1};Layers{MeshLayers};Recombine;}
-//Physical Volume("internal") = 1;
+Extrude {0, 0, z} {Surface{1};Layers{MeshLayers};Recombine;}
+Physical Volume("vol") = 1;
 
