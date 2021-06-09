@@ -59,7 +59,7 @@
       {
         "cell": 0, 
         "component": 1, 
-        "enthalpy": 500000, 
+        "enthalpy": 50.0e3, 
         "name": "inj 1", 
         "rate": 7.5
       }, 

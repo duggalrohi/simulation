@@ -36,8 +36,9 @@ Transfinite Surface {1};
 //mapped mesh of the surface
 Recombine Surface {1};
 
-Physical Surface("reservoir surface", 1) = {1};
+//Physical Surface("reservoir surface", 1) = {1};
 //depth of the reservoir
 //Extrude {0, 0, zdim} {Surface{1}; Curve{8}; Curve{5}; Curve{6}; Curve{7}; Point{1}; Point{2}; Point{3}; Point{4}; Layers{1}; Recombine;}
 
-//Physical Volume("reservoir", 31) = {1};
+Extrude {0, 0, zdim} {Surface{1}; Layers{1}; Recombine;}
+Physical Volume("reservoir", 31) = {1};

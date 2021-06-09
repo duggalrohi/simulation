@@ -2,7 +2,7 @@
   "eos": {
     "name": "we"
   },
-  "gravity": null,
+  "gravity": 0.0,
   "initial": {
     "primary": [
       10.0e5,

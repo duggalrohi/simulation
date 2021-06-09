@@ -3,14 +3,12 @@
 - [info, run, start, {"compiler": "GCC version 8.3.0"}]
 - [info, run, start, {"num_processors": 1}]
 
-- [info, simulation, init, {"wall_time": "20210606 013626.628 +0000"}]
+- [info, simulation, init, {"wall_time": "20210609 231702.098 +0000"}]
 
 - [info, input, default, {"logfile.filename": "one_cell_1e7_vol_onur2008.yaml"}]
 - [info, input, default, {"output.filename": "one_cell_1e7_vol_onur2008.h5"}]
 - [info, input, default, {"eos.primary.scale.pressure": 0.100000E+07}]
-- [info, input, default, {"mesh.radial": F}]
 - [info, input, default, {"permeability_angle": 0.000000E+00}]
-- [info, input, default, {"gravity": 0.000000E+00}]
 - [info, input, default, {"rock.types[0].name": ""}]
 - [info, input, default, {"mesh.rebalance": F}]
 - [info, input, default, {"rock.relative_permeability.type": "Linear"}]
@@ -55,7 +53,7 @@
 - [info, simulation, dof, {"total": 1, "min": 1, "max": 1, "imbalance": 0.000000E+00}]
 - [info, simulation, sources, {"count": 1}]
 
-- [info, timestepper, start, {"time": 0.000000E+00, "wall_time": "20210606 013626.723 +0000"}]
+- [info, timestepper, start, {"time": 0.000000E+00, "wall_time": "20210609 231702.173 +0000"}]
 
 - [info, timestep, start, {"count": 1, "size": 0.360000E+04}]
 - [info, nonlinear_solver, iteration, {"count": 1, "linear_solver_iterations": 1, "cell": 0, "equation": 1, "residual": 0.969361E-05}]
@@ -141,5 +139,5 @@
 - [info, nonlinear_solver, end, {"iterations": 2, "converged": T, "reason": "function_relative"}]
 - [info, timestep, end, {"tries": 1, "size": 0.612000E+05, "time": 0.864000E+06, "status": "final"}]
 
-- [info, timestepper, end, {"elapsed_seconds": 0.415000E+00, "wall_time": "20210606 013627.138 +0000"}]
-- [info, simulation, destroy, {"elapsed_seconds": 0.512000E+00, "wall_time": "20210606 013627.140 +0000"}]
+- [info, timestepper, end, {"elapsed_seconds": 0.358000E+00, "wall_time": "20210609 231702.532 +0000"}]
+- [info, simulation, destroy, {"elapsed_seconds": 0.436000E+00, "wall_time": "20210609 231702.534 +0000"}]

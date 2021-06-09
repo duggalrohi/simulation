@@ -3,7 +3,7 @@
   "initial": {
     "region": 1,
     "primary": [
-      50.0e5, 140.0
+      50.0e5
     ]
   },
   "title": "one cell", 
@@ -40,14 +40,13 @@
     }, 
     "stop": 864000.0
   },
-  "gravity": null,
+  "gravity": 0.0,
   "eos": {
     "name": "w", "temperature": 140.0
   },
   "thermodynamics": "ifc67",
   "mesh": {
-    "filename": "one_cell_1e7_vol_onur2008.msh",
-    "thickness": 1000.0
+    "filename": "one_cell_1e7_vol_onur2008.msh"
   },
   "source": [
     {
