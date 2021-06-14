@@ -3,7 +3,7 @@
   "initial": {
     "region": 1,
     "primary": [
-      50.0e5
+      50.0e5, 140.0
     ]
   },
   "title": "one cell", 
@@ -42,7 +42,7 @@
   },
   "gravity": 0.0,
   "eos": {
-    "name": "w", "temperature": 140.0
+    "name": "w", "temperature":140.0
   },
   "thermodynamics": "ifc67",
   "mesh": {

@@ -3,7 +3,7 @@
   "initial": {
     "region": 1, 
     "primary": [
-      50e5
+      50e5, 140.0
     ]
   }, 
   "title": "one cell", 
@@ -40,7 +40,7 @@
     }, 
     "stop": 864000.0
   }, 
-  "gravity": null, 
+  "gravity": 0.0, 
   "eos": {
     "name": "w", "temperature": 140.0
   }, 

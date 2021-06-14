@@ -3,14 +3,13 @@
 - [info, run, start, {"compiler": "GCC version 8.3.0"}]
 - [info, run, start, {"num_processors": 1}]
 
-- [info, simulation, init, {"wall_time": "20210606 013032.387 +0000"}]
+- [info, simulation, init, {"wall_time": "20210614 063236.379 +0000"}]
 
 - [info, input, default, {"logfile.filename": "one_cell_25e9_vol.yaml"}]
 - [info, input, default, {"output.filename": "one_cell_25e9_vol.h5"}]
 - [info, input, default, {"eos.primary.scale.pressure": 0.100000E+07}]
 - [info, input, default, {"mesh.radial": F}]
 - [info, input, default, {"permeability_angle": 0.000000E+00}]
-- [info, input, default, {"gravity": 0.000000E+00}]
 - [info, input, default, {"mesh.rebalance": F}]
 - [info, input, default, {"rock.relative_permeability.type": "Linear"}]
 - [info, input, default, {"rock.relative_permeability.liquid": "[0.000000E+00,...]"}]
@@ -54,7 +53,7 @@
 - [info, simulation, dof, {"total": 1, "min": 1, "max": 1, "imbalance": 0.000000E+00}]
 - [info, simulation, sources, {"count": 1}]
 
-- [info, timestepper, start, {"time": 0.000000E+00, "wall_time": "20210606 013033.008 +0000"}]
+- [info, timestepper, start, {"time": 0.000000E+00, "wall_time": "20210614 063236.465 +0000"}]
 
 - [info, timestep, start, {"count": 1, "size": 0.360000E+04}]
 - [info, nonlinear_solver, iteration, {"count": 1, "linear_solver_iterations": 1, "cell": 0, "equation": 1, "residual": 0.775489E-07}]
@@ -127,5 +126,5 @@
 - [info, nonlinear_solver, end, {"iterations": 1, "converged": T, "reason": "function_relative"}]
 - [info, timestep, end, {"tries": 1, "size": 0.612000E+05, "time": 0.864000E+06, "status": "final"}]
 
-- [info, timestepper, end, {"elapsed_seconds": 0.437000E+00, "wall_time": "20210606 013033.447 +0000"}]
-- [info, simulation, destroy, {"elapsed_seconds": 0.106700E+01, "wall_time": "20210606 013033.453 +0000"}]
+- [info, timestepper, end, {"elapsed_seconds": 0.325000E+00, "wall_time": "20210614 063236.791 +0000"}]
+- [info, simulation, destroy, {"elapsed_seconds": 0.414000E+00, "wall_time": "20210614 063236.793 +0000"}]
