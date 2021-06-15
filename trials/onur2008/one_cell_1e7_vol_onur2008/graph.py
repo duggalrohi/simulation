@@ -1,33 +1,46 @@
 import h5py
-import os
-import sys
 import matplotlib.pyplot as plt
+import sys
 import numpy as np
 
-out = h5py.File(sys.argv[1],"r+")
+def gr(filename, var1, var2, Shape=None):
+    file = h5py.File(filename, "r+")
+    if Shape is None:
+        y = file[var1][:,-1] #value of last cell at all simulation times
+        x = file[var2][:,0]
+        if name == "pressure" or "CO2_partial_pressure":
+            X = x*1.1574074074074074074074074074074e-5
+            Y = y*1e-5
+            unit = "bar"
+        elif name ==  "temperature":
+            X = x*1.1574074074074074074074074074074e-5
+            Y = y
+            unit = "celsius"
+        else:
+            plt.plot(x, y, '-')
+            plt.title(filename+'/'+var1+' vs '+ var2)
+            plt.show()
+        plt.plot(X, Y, '-')
+        plt.title(filename + '/' + var1 + ' vs ' + var2)
+        plt.xlabel(var2 + ', day')
+        plt.ylabel(var1 + ', ' + unit)
+        plt.show()
+    else:
+        val = file[var1][-1,:] #value of all elements at the last simulation time
+        arr = val.reshape(Shape)
+        plt.imshow(arr, cmap='viridis', origin='lower')
+        plt.title(filename+'/'+var1)
+        plt.colorbar()
+        plt.show()
+    return
 
-z = out['cell_fields']['cell_geometry_centroid'][:, 1]
-
-xmin = min(z)-49.9
-xmax = max(z)+49.9
-
-ymin = min(z)-49.9
-ymax = max(z)+49.9
-
-#T = out['cell_fields/fluid_temperature'][:, 1]
-#H = out['source_fields/source_enthalpy'][:, 1]
-
-P = out['cell_fields/fluid_pressure'][:, 0]
-time = out['time'][:, 0]
-plt.plot(time, P*1e-5, '-')
-#plt.xscale('log')
-plt.xlabel('')
-
-#plt.plot(time, T, '-')
-#plt.ylabel('Enthalpy, kJ')
-#plt.xlabel('Temperature')
-#plt.ylabel('Temperature')
-plt.ylabel('')
-#plt.ylim(0,2))
-#plt.xlim(0,10)
-plt.show()
+if __name__=="__main__":
+    filename=sys.argv[1]
+    var1 = "cell_fields/fluid_" + sys.argv[2]
+    var2 = sys.argv[3]
+    name = sys.argv[2]
+    if len(sys.argv) > 4:
+        Shape = (np.int(sys.argv[4]),np.int(sys.argv[5]))
+        gr(filename, var1, var2, Shape)
+    else:
+        gr(filename, var1, var2)

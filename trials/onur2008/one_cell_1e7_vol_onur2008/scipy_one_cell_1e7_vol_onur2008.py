@@ -4,12 +4,15 @@
 import scipy.integrate
 import matplotlib.pyplot as pyplot
 import numpy
+import iapws
 
 
-def DensityWater(T):
-    '''Approximation of density of water with temperature
+def DensityWater(P,T):
+    '''Density of water at temperature T (deg C) and Pressure, P (Pa)
     '''
-    rho = -6.621e-8*T*T*T*T + 3.95337e-5*T*T*T - 1.00637e-2*T*T + 3.018277e-1*T + 996.112
+    state = iapws.IAPWS97(P=P/1.0e6, T=T+273.15)
+    rho = state.rho
+    # rho = -6.621e-8*T*T*T*T + 3.95337e-5*T*T*T - 1.00637e-2*T*T + 3.018277e-1*T + 996.112
     return rho
     
     
@@ -30,15 +33,21 @@ def Solve(P0, W, V, phi, c, alpha, t0, t1, nt):
     soln = []
     
     T = 140.0
+    T = 25.0
     
     dt = (t1 - t0)/nt
+    P = P0
+    dP = 1.0e3
     while solver.successful() and solver.t < t1:
-        rho = DensityWater(T)
+        rho = DensityWater(P, T)
+        P1 = P + dP
+        rho1 = DensityWater(P1, T) 
+        c = (rho1 - rho)/dP / rho
         Sm = V*phi*rho*c
-        print('Sm', rho, Sm)
         solver.set_f_params(P0, W, Sm, alpha)
-        val = solver.integrate(solver.t + dt)
-        soln.append((solver.t, val))
+        P = solver.integrate(solver.t + dt)[0]
+        soln.append((solver.t, P))
+        print('P, Rho, c, Sm', P, rho, c, Sm)
         
     # print(soln)
     soln = numpy.array(soln)

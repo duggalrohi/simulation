@@ -10,7 +10,7 @@
   "time": {
     "start": 0.0, 
     "step": {
-      "size": 3600, 
+      "size": 1000, 
       "adapt": {
         "on": true, 
         "reduction": 0.2, 
@@ -34,7 +34,7 @@
       }, 
       "maximum": {
         "number": 1000, 
-        "size": 86400
+        "size": 80000.0
       }, 
       "method": "beuler"
     }, 
@@ -42,7 +42,7 @@
   },
   "gravity": 0.0,
   "eos": {
-    "name": "w", "temperature":140.0
+    "name": "we", "temperature":140.0
   },
   "thermodynamics": "ifc67",
   "mesh": {

@@ -1,0 +1,87 @@
+{
+  "eos": {
+    "name": "we"
+  },
+  "gravity": 0.0,
+  "initial": {
+    "primary": [
+      10.0e5,
+      160.0
+    ],
+    "region": 1
+  },
+  "mesh": {
+    "filename": "non_minc_15_cells_1500m.msh"
+  },
+  "output": {
+    "final": true,
+    "frequency": 1,
+    "initial": true
+  },
+  "rock": {
+    "types": [
+      {
+        "density": 2600,
+        "dry_conductivity": 1.5,
+        "name": "fract",
+        "permeability": [
+          1e-13,
+          1e-13,
+          1e-13
+        ],
+        "porosity": 0.5,
+        "specific_heat": 900,
+        "wet_conductivity": 1.5
+      }
+    ]
+  },
+  "source": [
+    {
+      "cell": 0,
+      "component": 1,
+      "enthalpy": 335.0e3,
+      "name": "gen 1",
+      "rate": 13
+    },
+    {
+      "cell": 14,
+      "name": "prd 1",
+      "rate": -13
+    }
+  ],
+  "thermodynamics": "ifc67",
+  "time": {
+    "start": 0,
+    "step": {
+      "adapt": {
+        "amplification": 2,
+        "maximum": 8,
+        "method": "iteration",
+        "minimum": 6,
+        "on": true,
+        "reduction": 0.25
+      },
+      "maximum": {
+        "number": 40,
+        "size": 259200
+      },
+      "method": "beuler",
+      "size": 43200,
+      "solver": {
+        "nonlinear": {
+          "maximum": {
+            "iterations": 8
+          },
+          "tolerance": {
+            "function": {
+              "absolute": null,
+              "relative": 1e-05
+            }
+          }
+        }
+      }
+    },
+    "stop": 7776000
+  },
+  "title": "1-D MINC column problem: MINC"
+}
