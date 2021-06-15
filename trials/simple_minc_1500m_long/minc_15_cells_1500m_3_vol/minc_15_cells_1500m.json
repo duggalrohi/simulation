@@ -108,11 +108,11 @@
         "reduction": 0.25
       },
       "maximum": {
-        "number": 40,
-        "size": 259200
+        "number": 1000,
+        "size": 2592000
       },
       "method": "beuler",
-      "size": 43200,
+      "size": 84600,
       "solver": {
         "nonlinear": {
           "maximum": {
@@ -127,7 +127,7 @@
         }
       }
     },
-    "stop": 7776000
+    "stop": 94672800
   },
   "title": "1-D MINC column problem: MINC"
 }
