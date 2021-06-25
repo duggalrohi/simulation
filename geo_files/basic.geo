@@ -3,7 +3,7 @@ x=1; //m
 y=1;
 z=10; 
 ElementSize=1;
-MeshLayers = 2;z
+MeshLayers = 2;
 nodes = 2; //required number of elements - 1, i.e., it is number of nodes
 inc = 1; //increment factor of mesh divisions
  
