@@ -3,7 +3,7 @@
 - [info, run, start, {"compiler": "GCC version 8.3.0"}]
 - [info, run, start, {"num_processors": 1}]
 
-- [info, simulation, init, {"wall_time": "20210626 053935.106 +0000"}]
+- [info, simulation, init, {"wall_time": "20210627 234400.657 +0000"}]
 
 - [info, input, default, {"logfile.filename": "minc_5_spot_250d.yaml"}]
 - [info, input, default, {"output.filename": "minc_5_spot_250d.h5"}]
@@ -51,7 +51,7 @@
 - [info, simulation, dof, {"total": 600, "min": 600, "max": 600, "imbalance": 0.000000E+00}]
 - [info, simulation, sources, {"count": 2}]
 
-- [info, timestepper, start, {"time": 0.000000E+00, "wall_time": "20210626 053935.262 +0000"}]
+- [info, timestepper, start, {"time": 0.000000E+00, "wall_time": "20210627 234400.757 +0000"}]
 
 - [info, timestep, start, {"count": 1, "size": 0.100000E+06}]
 - [info, fluid, transition, {"cell": 0, "minc": 0, "old_region": 4, "new_region": 1, "new_primary": [0.858170E+07, 0.299909E+03]}]
@@ -871,5 +871,5 @@
 - [info, nonlinear_solver, end, {"iterations": 3, "converged": T, "reason": "function_relative"}]
 - [info, timestep, end, {"tries": 1, "size": 0.651288E+08, "time": 0.115185E+10, "status": "final"}]
 
-- [info, timestepper, end, {"elapsed_seconds": 0.219900E+01, "wall_time": "20210626 053937.462 +0000"}]
-- [info, simulation, destroy, {"elapsed_seconds": 0.236000E+01, "wall_time": "20210626 053937.466 +0000"}]
+- [info, timestepper, end, {"elapsed_seconds": 0.241100E+01, "wall_time": "20210627 234403.169 +0000"}]
+- [info, simulation, destroy, {"elapsed_seconds": 0.251600E+01, "wall_time": "20210627 234403.173 +0000"}]
