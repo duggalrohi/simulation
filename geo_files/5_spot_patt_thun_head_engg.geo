@@ -4,7 +4,7 @@ y=500;
 z=-305; 
 ElementSize=1;
 MeshLayers = 1;
-nodes = 11; //required number of elements - 1, i.e., it is number of nodes
+nodes = 21; //required number of elements - 1, i.e., it is number of nodes
 inc = 1; //increment factor of mesh divisions
  
 // Geometry
