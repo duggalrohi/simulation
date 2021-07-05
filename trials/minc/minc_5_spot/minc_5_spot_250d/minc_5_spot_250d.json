@@ -6,7 +6,7 @@
   "eos": {"name": "we"},
   "initial": {"primary": [85.877083e5, 0.01],
               "region": 4},
-  "mesh": {"filename": "5_spot_patt_thun_head_engg.msh", 
+  "mesh": {"filename": "5_spot_minc.msh", 
            "zones": {"minc": {"-": null}},
            "minc":{"geometry":{"matrix":{"volume":[0.2,0.75]},
                                "fracture":{"volume":0.05,"planes":3,"spacing":250}},
@@ -40,7 +40,7 @@
                               "minimum": 5.0,
                               "method": "iteration",
                               "maximum": 8.0}, 
-                    "solver": {"nonlinear": {"tolerance": {"function": {"relative": 1e-06,
+                    "solver": {"nonlinear": {"tolerance": {"function": {"relative": 1e-05,
                                                                         "absolute": 1.0}},
                                              "maximum": {"iterations": 8}}
                               }
