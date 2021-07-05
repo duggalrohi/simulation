@@ -6,7 +6,7 @@
   "eos": {"name": "we"},
   "initial": {"primary": [85.877083e5, 0.01],
               "region": 4},
-  "mesh": {"filename": "5_spot_minc.msh", 
+  "mesh": {"filename": "5_spot_patt.msh", 
            "zones": {"minc": {"-": null}},
            "minc":{"geometry":{"matrix":{"volume":[0.2,0.75]},
                                "fracture":{"volume":0.05,"planes":3,"spacing":250}},
@@ -21,7 +21,7 @@
                     "specific_heat":950.0,
                     "wet_conductivity":2.22},
                     {"name":"matrx",
-                    "permeability":[1e-17,9e-17,1e-17],
+                    "permeability":[1e-17,1e-17,1e-17],
                     "porosity":0.1,
                     "specific_heat":950.0,
                     "density":2600,
@@ -42,7 +42,7 @@
                               "maximum": 8.0}, 
                     "solver": {"nonlinear": {"tolerance": {"function": {"relative": 1e-05,
                                                                         "absolute": 1.0}},
-                                             "maximum": {"iterations": 8}}
+                                             "maximum": {"iterations": 8.0}}
                               }
                   }
             },
