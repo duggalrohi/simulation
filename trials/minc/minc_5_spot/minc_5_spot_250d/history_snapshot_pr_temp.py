@@ -16,9 +16,11 @@ r=np.int64(20) #number of y axis grid elements
 T=T1.reshape(q,r)
 P=P1.reshape(q,r)
 
-l=np.int64(500) #length of model
-h=np.linspace(0,l,q)
-x,y=np.meshgrid(h,h)
+gx=out['cell_fields/cell_geometry_centroid'][()]
+yms=gx[0:400,0][::20]
+xms=gx[0:20,1]
+
+x,y=np.meshgrid(xms,yms)
 fig, ax=plt.subplots(1,2,figsize=(16,9))
 plt.subplot(1,2,1, autoscale_on=True, aspect='equal')
 ax[0]=plt.pcolormesh(x,y,T,cmap='viridis',shading='auto')
