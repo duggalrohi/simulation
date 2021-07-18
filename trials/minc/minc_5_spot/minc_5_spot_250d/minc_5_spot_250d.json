@@ -21,7 +21,7 @@
                     "specific_heat":950.0,
                     "wet_conductivity":2.22},
                     {"name":"matrx",
-                    "permeability":[1e-17,1e-17,1e-17],
+                    "permeability":[9e-17,9e-17,9e-17],
                     "porosity":0.1,
                     "specific_heat":950.0,
                     "density":2600,
