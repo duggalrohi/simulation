@@ -1,24 +1,24 @@
 '''usage
-python hm.py filename.h5 temperature pressure 400 20 20 500'''
+python hm.py filename.h5 temperature pressure 400 20 20'''
 import h5py as h
 import matplotlib.pyplot as plt
 import sys
 import numpy as np
 
-out=h.File('minc_5_spot_250d.h5',"r+")
-m='cell_fields/fluid_temperature'
-n='cell_fields/fluid_pressure'
-p=np.int64(400) #total number of elements 
+out=h.File(sys.argv[1])
+m='cell_fields/fluid_'+sys.argv[2]
+n='cell_fields/fluid_'+sys.argv[3]
+p=np.int64(sys.argv[4]) #total number of elements (for minc just the total number of fracture elements)
 T1=out[m][-1,0:p]
 P1=out[n][-1,0:p]
-q=np.int64(20) #number of x axis grid elements
-r=np.int64(20) #number of y axis grid elements
+q=np.int64(sys.argv[5]) #number of x axis grid elements
+r=np.int64(sys.argv[6]) #number of y axis grid elements
 T=T1.reshape(q,r)
 P=P1.reshape(q,r)
 
 gx=out['cell_fields/cell_geometry_centroid'][()]
-yms=gx[0:400,0][::20]
-xms=gx[0:20,1]
+yms=gx[0:p,0][::q]
+xms=gx[0:q,1]
 
 x,y=np.meshgrid(xms,yms)
 fig, ax=plt.subplots(1,2,figsize=(16,9))

@@ -1,5 +1,5 @@
 '''use it like this 
-python.exe T_vs_t_plot.py minc_5_spot_250d.h5 temperature pressure 400 (here n is number of elements) 21 (here m is for every diagonal element)
+python.exe T_vs_t_plot.py minc_5_spot_250d.h5 temperature pressure 10 (10*10=100 total number of elements)
 '''
 
 import h5py
@@ -58,7 +58,7 @@ ss=h[::-1]
 
 fig, ax1=plt.subplots()
 ax1.plot(ss,P*1e-6,':',label=pr,color='red')
-# ax1.plot(xPLit250d,PLit250d,'-',label='P_lit0250d',color='green')
+ax1.plot(xPLit250d,PLit250d,'-',label='P_lit0250d',color='green')
 ax1.plot(xPLit50d,PLit50d,'-',label='P_lit50d',color='green')
 ax1.plot(xPsingle,Psingle,'-',label='P_single_lit',color='green')
 ax1.set_ylabel('Pressure, MPa')
@@ -67,7 +67,7 @@ ax1.set_xlabel('spacing between doublets, m')
 ax2=ax1.twinx()
 
 ax2.plot(ss,T,'--',label=temp)
-# ax2.plot(xTLit250d,TLit250d,'-',label='T_lit250d')
+ax2.plot(xTLit250d,TLit250d,'-',label='T_lit250d')
 ax2.plot(xTLit50d,TLit50d,'-',label='T_lit50d')
 ax2.plot(xTsingle,Tsingle,'-',label='T_single_lit')
 ax2.set_ylabel('Temperature, $^\circ$C')
