@@ -1,5 +1,5 @@
 '''use it like this 
-python.exe T_vs_t_plot.py minc_5_spot_250d.h5 temperature pressure 10 (10*10=100 number of elements of the grid)
+python.exe T_vs_t_plot.py minc_5_spot_250d.h5 temperature pressure 10 (10*10=100 number of elements of the grid) 50 (i.e. case, 50m, single porosity or 250m)
 '''
 
 import h5py
@@ -49,6 +49,16 @@ Pvol=[7.24195, 6.54933, 6.26247, 6.09247, 5.97005, 5.86157, 5.74223, 5.57893, 5.
 xTvol=[671.751442127222, 601.040764008566, 530.330085889903, 459.619407771235, 388.90872965255, 318.198051533844, 247.487373415146, 176.776695296493, 106.066017177908, 35.3553390593154]
 Tvol=[121.094, 135.282, 158.348, 186.521, 214.029, 236.412, 252.417, 263.378, 267.68, 240.793]
 
+xvol50=[35.3553390593274, 106.066017177982, 176.776695296637, 247.487373415292, 318.198051533946, 388.908729652601, 459.619407771256, 530.330085889911, 601.040764008565, 671.75144212722]
+Pvol50=[5.95887, 7.51959, 8.05614, 8.24719, 8.36332, 8.46314, 8.57222, 8.73625, 9.04487, 9.76531]
+xTvol50=[35.3553390593274, 106.066017177982, 176.776695296637, 247.487373415292, 318.198051533946, 388.908729652601, 459.619407771256, 530.330085889911, 601.040764008565, 671.75144212722]
+Tvol50=[275.138, 290.716, 295.498, 295.405, 287.898, 267.308, 222.697, 161.52, 123.977, 117.603]
+
+xvol0=[35.3553390593274, 106.066017177982, 176.776695296637, 247.487373415292, 318.198051533946, 388.908729652601, 459.619407771256, 530.330085889911, 601.040764008565, 671.75144212722]
+Pvol0=[5.36904, 7.19185, 7.84698, 8.16809, 8.28981, 8.39126, 8.49841, 8.65823, 8.96562, 9.68628]
+xTvol0=[35.3553390593274, 106.066017177982, 176.776695296637, 247.487373415292, 318.198051533946, 388.908729652601, 459.619407771256, 530.330085889911, 601.040764008565, 671.75144212722]
+Tvol0=[268.431, 287.665, 293.664, 296.465, 292.252, 275.427, 232.603, 166.374, 124.108, 117.599]
+
 '''waiwera results'''
 '''for pressure'''
 pr='cell_fields/fluid_'+sys.argv[3]
@@ -71,34 +81,59 @@ for i in range(0,g):
         h.append(d)
 ss=h[::-1] 
 
+if np.int64(sys.argv[5])==0:
+    fig, ax1=plt.subplots()
+    ax1.plot(ss,P*1e-6,'--',label=pr,color='red')
+    ax1.plot(xPsingle,Psingle,'1',label='P_single_lit',color='green')
+    ax1.plot(xvol0,Pvol0,'-',label='volsung_single_porosity_P',color='black')
+    ax1.set_ylabel('Pressure, MPa')
+    ax1.set_xlabel('spacing between doublets, m')
+    ax2=ax1.twinx()
+    ax2.plot(ss,T,'--',label=temp)
+    ax2.plot(xTsingle,Tsingle,'p',label='T_single_lit')
+    ax2.plot(xTvol0,Tvol0,'-',label='volsung_single_porosity_T',color='black')
+    ax2.plot(xTOUPM,TTOUPM,'+',label='T_TOUGH_porousM')
+    ax2.set_ylabel('Temperature, $^\circ$C')
+    fig.tight_layout()
+    ax1.legend(loc='upper center')
+    plt.legend(loc='lower center')
+    plt.show()
 
-fig, ax1=plt.subplots()
-ax1.plot(ss,P*1e-6,'^',label=pr,color='red')
-ax1.plot(xPLit250d,PLit250d,'-',label='P_lit0250d',color='green')
-ax1.plot(xPLit50d,PLit50d,'v',label='P_lit50d',color='green')
-ax1.plot(xPsingle,Psingle,'1',label='P_single_lit',color='green')
-ax1.plot(xvol,Pvol,'--',label='P_250_volsung')
-ax1.set_ylabel('Pressure, MPa')
-ax1.set_xlabel('spacing between doublets, m')
+if np.int64(sys.argv[5])==50:
+    fig, ax1=plt.subplots()
+    ax1.plot(ss,P*1e-6,'--',label=pr,color='red')
+    ax1.plot(xPLit50d,PLit50d,'v',label='P_lit50d',color='green')
+    ax1.plot(xvol50,Pvol50,'-',label='volsung_50d_P',color='black')
+    ax1.set_ylabel('Pressure, MPa')
+    ax1.set_xlabel('spacing between doublets, m')
+    ax2=ax1.twinx()
+    ax2.plot(ss,T,'--',label=temp)
+    ax2.plot(xTLit50d,TLit50d,'s',label='T_lit50d')
+    ax2.plot(xTvol50,Tvol50,'-',label='volsung_50d_T',color='black')
+    ax2.plot(xTOU50,TTOU50,'*',label='T_TOUGH50m')
+    ax2.set_ylabel('Temperature, $^\circ$C')
+    fig.tight_layout()
+    ax1.legend(loc='upper center')
+    plt.legend(loc='lower center')
+    plt.show()
 
-ax2=ax1.twinx()
+if np.int64(sys.argv[5])==250:
+    fig, ax1=plt.subplots()
+    ax1.plot(ss,P*1e-6,'--',label=pr,color='red')
+    ax1.plot(xPLit250d,PLit250d,'-',label='P_lit0250d',color='green')
+    ax1.plot(xvol,Pvol,'--',label='P_250_volsung')
+    ax1.set_ylabel('Pressure, MPa')
+    ax1.set_xlabel('spacing between doublets, m')
+    ax2=ax1.twinx()
+    ax2.plot(ss,T,'--',label=temp)
+    ax2.plot(xTLit250d,TLit250d,'-',label='T_lit250d')
+    ax2.plot(xTOU,TTOU,'P',label='T_TOUGH250m')
+    ax2.plot(xTvol,Tvol,'^',label='T_volsung_250')
+    ax2.set_ylabel('Temperature, $^\circ$C')
+    fig.tight_layout()
+    ax1.legend(loc='upper center')
+    plt.legend(loc='lower center')
+    plt.show()
 
-ax2.plot(ss,T,'--',label=temp)
-ax2.plot(xTLit250d,TLit250d,'-',label='T_lit250d')
-ax2.plot(xTLit50d,TLit50d,'s',label='T_lit50d')
-ax2.plot(xTsingle,Tsingle,'p',label='T_single_lit')
-ax2.plot(xTOU,TTOU,'P',label='T_TOUGH250m')
-ax2.plot(xTOU50,TTOU50,'*',label='T_TOUGH50m')
-ax2.plot(xTOUPM,TTOUPM,'+',label='T_TOUGH_porousM')
-ax2.plot(xTvol,Tvol,'^',label='T_volsung_250')
-ax2.set_ylabel('Temperature, $^\circ$C')
-
-fig.tight_layout()
-
-ax1.legend(loc='upper center')
-
-plt.legend(loc='lower center')
-
-plt.show()
 for i in range(0,g):
     print(ss[i], 1e-6*P[i], T[i])

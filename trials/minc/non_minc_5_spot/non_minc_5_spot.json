@@ -11,32 +11,30 @@
 "rock": {"types":[{
                 "cells":[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99],
                 "permeability":[6e-15,6e-15,6e-15],
-                "porosity":0.5,
+                "porosity":0.1,
                 "density":2600,
-                "specific_heat":950.0,
-                "wet_conductivity":2.22}],
+                "specific_heat":1000.0,
+                "wet_conductivity":2.22,
+                "dry_conductivity":2.22}],
         "relative_permeability": {"type": "corey","slr": 0.3,"ssr": 0.05}
         },
-"time": {"start": 0,
-        "step": {"adapt": {"amplification": 2,
-                        "maximum": 8,
-                        "method": "iteration", 
-                        "minimum": 4,
-                        "on": true,
-                        "reduction": 0.2
-                        },
-                "maximum": {"number": 1599, 
-                        "size": 63120000},
-                "method": "beuler",
-                "size": 100000,
-                "solver": {"nonlinear": {"maximum": {"iterations": 8},
-                                        "tolerance": {"function": {"absolute": null,
-                                                                "relative": 1e-05}
-                                                        }
-                                        }
-                        }
+"time": {"start": 0.0, 
+                "stop":1151852400.0,
+                "step": {"size": 100000.0, 
+                        "maximum": {"number": 350, "size": 15768000.0},
+                        "method": "beuler",       
+                        "adapt": {"on": true, 
+                                "reduction": 0.2,
+                                "amplification": 2.0,
+                                "minimum": 5.0,
+                                "method": "iteration",
+                                "maximum": 8.0}, 
+                        "solver": {"nonlinear": {"tolerance": {"function": {"relative": 1e-06,
+                                                                        "absolute": 1.0}},
+                                                "maximum": {"iterations": 8}}
+                                }
+                }
                 },
-        "stop": 1.151852400e9},
 "source": [{"cell": 0,
         "component": 1,
         "enthalpy": 500.0e3,
