@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "PML38140",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::27200" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "Name": "Petroleum Mining License 38140" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 2626292.785681460984051, 6198047.177199701778591 ], [ 2626403.96882570721209, 6204217.841705374419689 ], [ 2630017.421013713814318, 6204162.250133250840008 ], [ 2629906.237869467120618, 6197991.58562757819891 ], [ 2626292.785681460984051, 6198047.177199701778591 ] ] ] ] } }
+]
+}

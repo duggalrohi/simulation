@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "Numerical grid waihapa ngaere field outline",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::27200" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "Name": "Numerical grid waihapa ngaere field" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 2628206.351828138809651, 6199158.14002385456115 ], [ 2626205.055231704376638, 6199158.14002385456115 ], [ 2626066.076301394961774, 6209595.457689980044961 ], [ 2629012.429623923264444, 6209651.049262102693319 ], [ 2629234.795912416186184, 6199172.037916884757578 ], [ 2628178.556042075622827, 6199144.242130822502077 ], [ 2628206.351828138809651, 6199158.14002385456115 ] ] ] ] } }
+]
+}

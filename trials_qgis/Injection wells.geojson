@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "Injection wells",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::27200" } },
+"features": [
+{ "type": "Feature", "properties": { "End Date": "1992-08-11", "Name": "Waihapa-7A", "Year": 1992, "bh_type_id": 1, "Datum Height": 219.9, "Datum": "KB", "Start Date": "1992-07-19", "bh_id": 541, "Starting point": "From pre-existing hole", "Side track start depth": 830, "Total Depth (m) AH": 1318, "True Vertical Depth": 1008.66, "Operator": "Petroleum Corporation Of NZ Exploration  Ltd", "Data Custodian": "NZP&M", "Sample Custodian": "MED Core Store", "Latitude (GD49)": -39.36511944, "Longitude (GD49)": 174.3601389, "Height": 214.1, "Completion Report": 1861, "License": 38140, "Basement Reached": null, "UWI": 100000000000.0, "Purpose": "exploration", "Well Content": "water", "Status": "injecting" }, "geometry": { "type": "Point", "coordinates": [ 2627236.96342486422509, 6203553.836665557697415 ] } }
+]
+}

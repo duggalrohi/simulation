@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "elevation",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::27200" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "Formation": "Kaimiro formation" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 2626066.076255505904555, 6209651.049367059022188 ], [ 2629316.080472075846046, 6209651.047452909871936 ], [ 2629316.07706914190203, 6198901.054258774966002 ], [ 2626066.0769998957403, 6198901.050430479459465 ], [ 2626066.076255505904555, 6209651.049367059022188 ] ] ] ] } }
+]
+}

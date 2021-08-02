@@ -1,0 +1,30 @@
+{
+"type": "FeatureCollection",
+"name": "Coordinates for waihapa ngaere field outline",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::27200" } },
+"features": [
+{ "type": "Feature", "properties": { "Easting": 2628199, "Northing": 6199288 }, "geometry": { "type": "Point", "coordinates": [ 2628199.0, 6199288.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2628512, "Northing": 6199441 }, "geometry": { "type": "Point", "coordinates": [ 2628512.0, 6199441.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2628620, "Northing": 6199864 }, "geometry": { "type": "Point", "coordinates": [ 2628620.0, 6199864.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2628663, "Northing": 6200776 }, "geometry": { "type": "Point", "coordinates": [ 2628663.0, 6200776.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2628495, "Northing": 6201794 }, "geometry": { "type": "Point", "coordinates": [ 2628495.0, 6201794.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2628476, "Northing": 6202482 }, "geometry": { "type": "Point", "coordinates": [ 2628476.0, 6202482.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2628623, "Northing": 6202977 }, "geometry": { "type": "Point", "coordinates": [ 2628623.0, 6202977.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2628603, "Northing": 6204965 }, "geometry": { "type": "Point", "coordinates": [ 2628603.0, 6204965.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2628118, "Northing": 6208162 }, "geometry": { "type": "Point", "coordinates": [ 2628118.0, 6208162.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2627862, "Northing": 6209073 }, "geometry": { "type": "Point", "coordinates": [ 2627862.0, 6209073.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2627484, "Northing": 6209456 }, "geometry": { "type": "Point", "coordinates": [ 2627484.0, 6209456.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2626976, "Northing": 6209413 }, "geometry": { "type": "Point", "coordinates": [ 2626976.0, 6209413.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2626569, "Northing": 6209053 }, "geometry": { "type": "Point", "coordinates": [ 2626569.0, 6209053.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2626550, "Northing": 6208164 }, "geometry": { "type": "Point", "coordinates": [ 2626550.0, 6208164.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2626629, "Northing": 6206181 }, "geometry": { "type": "Point", "coordinates": [ 2626629.0, 6206181.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2626358, "Northing": 6204525 }, "geometry": { "type": "Point", "coordinates": [ 2626358.0, 6204525.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2626332, "Northing": 6203515 }, "geometry": { "type": "Point", "coordinates": [ 2626332.0, 6203515.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2626417, "Northing": 6202875 }, "geometry": { "type": "Point", "coordinates": [ 2626417.0, 6202875.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2626713, "Northing": 6202464 }, "geometry": { "type": "Point", "coordinates": [ 2626713.0, 6202464.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2627028, "Northing": 6201193 }, "geometry": { "type": "Point", "coordinates": [ 2627028.0, 6201193.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2627065, "Northing": 6200381 }, "geometry": { "type": "Point", "coordinates": [ 2627065.0, 6200381.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2627256, "Northing": 6199826 }, "geometry": { "type": "Point", "coordinates": [ 2627256.0, 6199826.0 ] } },
+{ "type": "Feature", "properties": { "Easting": 2627795, "Northing": 6199482 }, "geometry": { "type": "Point", "coordinates": [ 2627795.0, 6199482.0 ] } }
+]
+}

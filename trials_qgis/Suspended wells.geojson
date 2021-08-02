@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "Suspended wells",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::27200" } },
+"features": [
+{ "type": "Feature", "properties": { "End Date": "1988-12-09", "Name": "Waihapa-3", "Year": 1988, "bh_type_id": 1, "Datum Height": 239, "Datum": "KB", "Start Date": "1988-10-16", "bh_id": 535, "Starting point": "Natural ground surface", "Side track start depth": null, "Total Depth (m) AH": 2816, "True Vertical Depth": 2491.9, "Operator": "Petroleum Corporation Of NZ Exploration  Ltd", "Data Custodian": "NZP&M", "Sample Custodian": "MED Core Store", "Latitude (GD49)": -39.3875, "Longitude (GD49)": 174.3669444, "Height": 231.9, "Completion Report": 1848, "License": 38140, "Basement Reached": null, "UWI": 100000000000.0, "Purpose": "development", "Well Content": "shows", "Status": "suspended" }, "geometry": { "type": "Point", "coordinates": [ 2627784.133718026336282, 6201060.520074499770999 ] } }
+]
+}
