@@ -1,0 +1,43 @@
+pcf
+* control data
+restart estimation
+1 20 1 0 1
+1 1 single point
+10.0 -3.0 0.3 0.03 10
+10.0 10.0 0.001
+0.1
+50 0.005 4 4 0.005 4
+1 1 1
+* parameter groups
+group relative 0.01 0.0001 switch 2.0 parabolic
+* parameter data
+ENTHALPY none relative 200e3 0.0 1200e3 group 1.0 0.0
+* observation groups
+obsgroup
+* observation data
+p0 9925052.000000 1.0 obsgroup
+p1 9672950.000000 1.0 obsgroup
+p2 9420927.000000 1.0 obsgroup
+p3 9168982.000000 1.0 obsgroup
+p4 8917115.000000 1.0 obsgroup
+p5 8665327.000000 1.0 obsgroup
+p6 8413617.000000 1.0 obsgroup
+p7 8161985.000000 1.0 obsgroup
+p8 7910431.500000 1.0 obsgroup
+p9 7658956.500000 1.0 obsgroup
+p10 7407560.000000 1.0 obsgroup
+p11 7156241.500000 1.0 obsgroup
+p12 6905001.500000 1.0 obsgroup
+p13 6653839.500000 1.0 obsgroup
+p14 6402755.500000 1.0 obsgroup
+p15 6151750.000000 1.0 obsgroup
+p16 5900822.500000 1.0 obsgroup
+p17 5649973.500000 1.0 obsgroup
+p18 5399157.000000 1.0 obsgroup
+p19 5136881.500000 1.0 obsgroup
+* model command line
+./runModel.py
+* model input/output
+columnPEST.tpl columnPEST.brynhild
+columnPEST.ins Observations.txt
+

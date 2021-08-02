@@ -1,0 +1,70 @@
+{
+    "boundaries": [], 
+    "initial": {
+      "region": 1, 
+      "primary": [
+        10e5
+      ]
+    }, 
+    "title": "one cell", 
+    "time": {
+      "start": 0.0, 
+      "step": {
+        "size": 0.5, 
+        "adapt": {
+          "on": true, 
+          "reduction": 0.2, 
+          "amplification": 2.0, 
+          "minimum": 5.0, 
+          "method": "iteration", 
+          "maximum": 8.0
+        }, 
+        "solver": {
+          "nonlinear": {
+            "tolerance": {
+              "function": {
+                "relative": 1e-9, 
+                "absolute": null
+              }
+            }, 
+            "maximum": {
+              "iterations": 8
+            }
+          }
+        }, 
+        "maximum": {
+          "number": 50, 
+          "size": 0.5
+        }, 
+        "method": "beuler"
+      }, 
+      "stop": 19.0
+    }, 
+    "gravity": null, 
+    "eos": {
+      "name": "w", "temperature": 18.5
+    }, 
+    "thermodynamics": "ifc67", 
+    "mesh": {
+      "filename": "one_cell_1m3_vol.msh"
+    }, 
+    "source": [
+      {
+        "cell": 0, 
+        "rate": -0.0041667, 
+        "name": "gen 1"
+      }
+    ], 
+    "rock": {
+      "types": [
+        {
+          "name": "dfalt", 
+          "density": 2500.0, 
+          "cells": [
+            0
+          ],
+          "porosity": 0.2
+        }
+    ]
+    }
+  }

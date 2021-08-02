@@ -1,0 +1,125 @@
+<!DOCTYPE Brynhild>
+<root volsung-version="1.2.0">
+ <brynhildmainwindow class="T2BrynhildMainWindow"><thermodynamictable class="TT_IAPWSIF97"></thermodynamictable>
+  <simulator>Sigurd</simulator>
+  <equationofstate>EOS1</equationofstate>
+  <numberofaqueoustracers>0</numberofaqueoustracers>
+  <hdf5reservoirviewer class="HDF5ReservoirViewer"><minclayer>0</minclayer>
+   <cellarrayname>Temperature</cellarrayname>
+   <projectionazimuth>0</projectionazimuth>
+   <projectioninclination>0</projectioninclination>
+   <cellopacity>1</cellopacity>
+   <cellstateselector>0</cellstateselector>
+   <cellcontoursvisible>0</cellcontoursvisible>
+   <cellcontoursarrayname></cellcontoursarrayname>
+   <cellcontourscolourtype>0</cellcontourscolourtype>
+   <ncellcontours>10</ncellcontours>
+   <cellcontoursopacity>1</cellcontoursopacity>
+   <cellcontourscustomcolourarrayname>Pressure</cellcontourscustomcolourarrayname>
+   <cellvectorsvisible>0</cellvectorsvisible>
+   <cellvectorsarrayname></cellvectorsarrayname>
+   <cellvectorscustomcolourarrayname></cellvectorscustomcolourarrayname>
+   <cellvectorsrelativethreshold>0.90000000000000002</cellvectorsrelativethreshold>
+   <cellvectorsrelativescale>0.10000000000000001</cellvectorsrelativescale>
+   <cellvectorscolourtype>0</cellvectorscolourtype>
+   <provisionalgridvisible>1</provisionalgridvisible>
+   <provisionalwelltracksvisible>1</provisionalwelltracksvisible>
+   <wellboreradiusfactor>1</wellboreradiusfactor>
+   <wellborecolourtype>0</wellborecolourtype>
+   <colorlookuptabledb class="ColorLookupTableDB"><colorlookuptabledata class="ColorLookupTableData" name="Pressure"><quantity>9</quantity>
+     <lowervaluecolor><r>0</r>
+      <g>0</g>
+      <b>255</b>
+      <alpha>255</alpha>
+     </lowervaluecolor>
+     <uppervaluecolor><r>255</r>
+      <g>0</g>
+      <b>0</b>
+      <alpha>255</alpha>
+     </uppervaluecolor>
+     <ncolors>256</ncolors>
+     <lowervalue>0</lowervalue>
+     <uppervalue>1</uppervalue>
+     <usevaluerange>0</usevaluerange>
+    </colorlookuptabledata>
+    <colorlookuptabledata class="ColorLookupTableData" name="Saturation (gas)"><quantity>18</quantity>
+     <lowervaluecolor><r>0</r>
+      <g>0</g>
+      <b>255</b>
+      <alpha>255</alpha>
+     </lowervaluecolor>
+     <uppervaluecolor><r>255</r>
+      <g>0</g>
+      <b>0</b>
+      <alpha>255</alpha>
+     </uppervaluecolor>
+     <ncolors>256</ncolors>
+     <lowervalue>0</lowervalue>
+     <uppervalue>1</uppervalue>
+     <usevaluerange>0</usevaluerange>
+    </colorlookuptabledata>
+    <colorlookuptabledata class="ColorLookupTableData" name="Saturation (liquid)"><quantity>18</quantity>
+     <lowervaluecolor><r>0</r>
+      <g>0</g>
+      <b>255</b>
+      <alpha>255</alpha>
+     </lowervaluecolor>
+     <uppervaluecolor><r>255</r>
+      <g>0</g>
+      <b>0</b>
+      <alpha>255</alpha>
+     </uppervaluecolor>
+     <ncolors>256</ncolors>
+     <lowervalue>0</lowervalue>
+     <uppervalue>1</uppervalue>
+     <usevaluerange>0</usevaluerange>
+    </colorlookuptabledata>
+    <colorlookuptabledata class="ColorLookupTableData" name="Temperature"><quantity>4</quantity>
+     <lowervaluecolor><r>0</r>
+      <g>0</g>
+      <b>255</b>
+      <alpha>255</alpha>
+     </lowervaluecolor>
+     <uppervaluecolor><r>255</r>
+      <g>0</g>
+      <b>0</b>
+      <alpha>255</alpha>
+     </uppervaluecolor>
+     <ncolors>256</ncolors>
+     <lowervalue>433.14999999999998</lowervalue>
+     <uppervalue>513.14999999999998</uppervalue>
+     <usevaluerange>1</usevaluerange>
+    </colorlookuptabledata>
+   </colorlookuptabledb>
+  </hdf5reservoirviewer>
+  <simulationrunwidget><isrunningremote>0</isrunningremote>
+  </simulationrunwidget>
+  <flownetwork class="FlowNetwork"><pressuretolerance>1000</pressuretolerance>
+   <flownetworkobjects></flownetworkobjects>
+   <flownetworkoptimizer class="FNO_TPSAAN"><ntemperature>32</ntemperature>
+    <maxiter>10000</maxiter>
+    <swapinterval>200</swapinterval>
+   </flownetworkoptimizer>
+  </flownetwork>
+  <gridcontainer class="GridContainer"><watch>0</watch>
+   <gridfilename>Stanford5.vtu</gridfilename>
+  </gridcontainer>
+  <brynhildsimulatorsettingscontainer class="BrynhildSimulatorSettingsContainer"><outputfilename>Results.sigurd</outputfilename>
+   <usegpu>0</usegpu>
+   <gpuid>0</gpuid>
+   <uselogport>0</uselogport>
+   <logport>2050</logport>
+   <usebacktracking>1</usebacktracking>
+   <mincnsoff>0</mincnsoff>
+   <translator>None</translator>
+   <initialstatesettingscontainer class="InitialStateSettingsContainer"><loadfromfile>0</loadfromfile>
+    <initialstatefilename></initialstatefilename>
+    <porosityfromfile>0</porosityfromfile>
+    <saveinterval>10</saveinterval>
+    <statesavefilename>SAVE.fafnir</statesavefilename>
+   </initialstatesettingscontainer>
+   <t2filename>RunMe.t2</t2filename>
+   <generatet2listing>1</generatet2listing>
+  </brynhildsimulatorsettingscontainer>
+ </brynhildmainwindow>
+</root>

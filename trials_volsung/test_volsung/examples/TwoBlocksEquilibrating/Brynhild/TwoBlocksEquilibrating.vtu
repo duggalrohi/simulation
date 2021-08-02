@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<VTKFile type="UnstructuredGrid" version="0.1" byte_order="LittleEndian" header_type="UInt32" compressor="vtkZLibDataCompressor">
+  <UnstructuredGrid>
+    <Piece NumberOfPoints="12"                   NumberOfCells="2"                   >
+      <PointData>
+      </PointData>
+      <CellData>
+        <DataArray type="Int32" Name="Block number" format="appended" RangeMin="1"                    RangeMax="2"                    offset="0"                   />
+        <DataArray type="Float32" Name="Column area" format="appended" RangeMin="100"                  RangeMax="100"                  offset="44"                  />
+        <DataArray type="Float32" Name="Column elevation" format="appended" RangeMin="0"                    RangeMax="0"                    offset="88"                  />
+        <DataArray type="Int32" Name="Column index" format="appended" RangeMin="0"                    RangeMax="1"                    offset="128"                 />
+        <DataArray type="Int32" Name="Layer index" format="appended" RangeMin="1"                    RangeMax="1"                    offset="172"                 />
+        <DataArray type="Int8" Name="Name" NumberOfComponents="5" format="appended" RangeMin="121.991803"           RangeMax="122.78843594"         offset="216"                 />
+        <DataArray type="Float32" Name="Permeability" NumberOfComponents="3" format="appended" RangeMin="1.7320508139e-15"     RangeMax="1.7320508139e-15"     offset="264"                 />
+        <DataArray type="Float32" Name="Porosity" format="appended" RangeMin="0.10000000149"        RangeMax="0.10000000149"        offset="308"                 />
+        <DataArray type="Int32" Name="Rock type index" format="appended" RangeMin="0"                    RangeMax="0"                    offset="352"                 />
+        <DataArray type="Float32" Name="Volume" format="appended" RangeMin="1000"                 RangeMax="1000"                 offset="392"                 />
+      </CellData>
+      <Points>
+        <DataArray type="Float32" Name="Points" NumberOfComponents="3" format="appended" RangeMin="0"                    RangeMax="24.494897428"         offset="436"                 />
+      </Points>
+      <Cells>
+        <DataArray type="Int64" Name="connectivity" format="appended" RangeMin=""                     RangeMax=""                     offset="520"                 />
+        <DataArray type="Int64" Name="offsets" format="appended" RangeMin=""                     RangeMax=""                     offset="604"                 />
+        <DataArray type="UInt8" Name="types" format="appended" RangeMin=""                     RangeMax=""                     offset="648"                 />
+      </Cells>
+    </Piece>
+  </UnstructuredGrid>
+  <AppendedData encoding="base64">
+   _AQAAAACAAAAIAAAADgAAAA==eJxjZGBgYAJiAAAYAAQ=AQAAAACAAAAIAAAADgAAAA==eJxjYDjhxADEAAfUAhU=AQAAAACAAAAIAAAACwAAAA==eJxjYIAAAAAIAAE=AQAAAACAAAAIAAAADgAAAA==eJxjYGBgYARiAAAMAAI=AQAAAACAAAAIAAAADgAAAA==eJxjZGBgYARiAAAUAAM=AQAAAACAAAAKAAAAEgAAAA==eJxTUEhUMFRQSFIwBAAKLwHmAQAAAACAAAAYAAAADwAAAA==eJyrlZ2gVosFAwBkPgfhAQAAAACAAAAIAAAADwAAAA==eJw7e+aM7VkgBgAZagVFAQAAAACAAAAIAAAACwAAAA==eJxjYIAAAAAIAAE=AQAAAACAAAAIAAAADgAAAA==eJxjYKhyYQBiAAVwAX0=AQAAAACAAACQAAAALQAAAA==eJxjYIABhYNA7IhgL0Big2lHhBoYewESGxnAzAGBBY7Y5WDmwNRA2ADsDQyVAQAAAACAAACAAAAALAAAAA==eJxjZIAAFijNzIAK2KE0F5TmhNJsUJoJSrOimcMIpTmgNDeaOTBzARQgAFk=AQAAAACAAAAQAAAADgAAAA==eJzjYIAAASgNAAEQABk=AQAAAACAAAACAAAACgAAAA==eJzj4QEAACYAGQ==
+  </AppendedData>
+</VTKFile>
