@@ -5,7 +5,7 @@
   <numberofaqueoustracers>0</numberofaqueoustracers>
   <parametertagcollection class="ParameterTagCollection"></parametertagcollection>
   <hdf5reservoirviewer class="HDF5ReservoirViewer"><minclayer>0</minclayer>
-   <cellarrayname>Pressure</cellarrayname>
+   <cellarrayname>Temperature</cellarrayname>
    <projectionazimuth>0</projectionazimuth>
    <projectioninclination>0</projectioninclination>
    <cellopacity>1</cellopacity>
@@ -170,7 +170,104 @@
   <simulationrunwidget><isrunningremote>0</isrunningremote>
   </simulationrunwidget>
   <flownetwork class="FlowNetwork"><pressuretolerance>1000</pressuretolerance>
-   <flownetworkobjects></flownetworkobjects>
+   <flownetworkobjects><flownetworkobject class="FNPO_Injector"><id>1092856650</id>
+     <x>-673</x>
+     <y>-325</y>
+     <name>InjectionWell</name>
+     <displaynamelabel>1</displaynamelabel>
+     <displaynamelabel3dpriority>99</displaynamelabel3dpriority>
+     <ismakeupwell>0</ismakeupwell>
+     <commission>0</commission>
+     <decommission>4102311600</decommission>
+     <disabled>0</disabled>
+     <inputports><flownetworkport class="FlowNetworkInputPort" portid="0"><fielddata><flowratetable class="FNP_FieldDataFlowRateTable"></flowratetable>
+       </fielddata>
+      </flownetworkport>
+     </inputports>
+     <outputports><flownetworkport class="FlowNetworkOutputPort" portid="0"><fielddata><flowratetable class="FNP_FieldDataFlowRateTable"></flowratetable>
+       </fielddata>
+      </flownetworkport>
+     </outputports>
+     <flowratetable class="FlowRateTable"><tablerow><time>0</time>
+       <flowrate><p>0</p>
+        <h>500000</h>
+        <w>7.5</w>
+        <q>0</q>
+        <xh2o>1</xh2o>
+       </flowrate>
+      </tablerow>
+     </flowratetable>
+     <welltrack class="WellTrack" npoints="2"><point index="0"><v row="0">25</v>
+       <v row="1">25</v>
+       <v row="2">-305</v>
+      </point>
+      <point index="1"><v row="0">25</v>
+       <v row="1">25</v>
+       <v row="2">0</v>
+      </point>
+     </welltrack>
+     <reservoir1dfielddata class="Reservoir1DFieldData"><time size="0"></time>
+      <z size="0"></z>
+      <pressure size="0"></pressure>
+      <temperature size="0"></temperature>
+     </reservoir1dfielddata>
+     <flownetworkportobjectwellfeedzones class="FNPO_WellFeedZones"><elevations size="1"><v index="0">-152.5</v>
+      </elevations>
+      <fractions size="1"><v index="0">1</v>
+      </fractions>
+     </flownetworkportobjectwellfeedzones>
+     <usetablenaturalstate>1</usetablenaturalstate>
+     <usetablecalibration>1</usetablecalibration>
+     <usetablescenario>1</usetablescenario>
+    </flownetworkobject>
+    <flownetworkobject class="FNPO_Producer"><id>1993122823</id>
+     <x>-539</x>
+     <y>-324</y>
+     <name>ProductionWell</name>
+     <displaynamelabel>1</displaynamelabel>
+     <displaynamelabel3dpriority>99</displaynamelabel3dpriority>
+     <ismakeupwell>0</ismakeupwell>
+     <commission>0</commission>
+     <decommission>4102311600</decommission>
+     <disabled>0</disabled>
+     <inputports></inputports>
+     <outputports><flownetworkport class="FlowNetworkOutputPort" portid="0"><fielddata><flowratetable class="FNP_FieldDataFlowRateTable"></flowratetable>
+       </fielddata>
+      </flownetworkport>
+     </outputports>
+     <flowratetable class="FlowRateTable"><tablerow><time>0</time>
+       <flowrate><p>0</p>
+        <h>0</h>
+        <w>7.5</w>
+        <q>0</q>
+        <xh2o>1</xh2o>
+       </flowrate>
+      </tablerow>
+     </flowratetable>
+     <welltrack class="WellTrack" npoints="2"><point index="0"><v row="0">475</v>
+       <v row="1">475</v>
+       <v row="2">-152.5</v>
+      </point>
+      <point index="1"><v row="0">475</v>
+       <v row="1">475</v>
+       <v row="2">0</v>
+      </point>
+     </welltrack>
+     <reservoir1dfielddata class="Reservoir1DFieldData"><time size="0"></time>
+      <z size="0"></z>
+      <pressure size="0"></pressure>
+      <temperature size="0"></temperature>
+     </reservoir1dfielddata>
+     <flownetworkportobjectwellfeedzones class="FNPO_WellFeedZones"><elevations size="1"><v index="0">-152.5</v>
+      </elevations>
+      <fractions size="1"><v index="0">1</v>
+      </fractions>
+     </flownetworkportobjectwellfeedzones>
+     <naturalstateflowcontrol>0</naturalstateflowcontrol>
+     <calibrationflowcontrol>0</calibrationflowcontrol>
+     <scenarioflowcontrol>0</scenarioflowcontrol>
+    </flownetworkobject>
+   </flownetworkobjects>
    <flownetworkoptimizer class="FNO_TPSAAN"><generateoutput>0</generateoutput>
     <nthreads>32</nthreads>
     <maxiter>10000</maxiter>
@@ -436,7 +533,7 @@
    <GeologyModelLayers size="0"></GeologyModelLayers>
   </geologymodel>
   <geomechanics class="GM_None"></geomechanics>
-  <boundaryconditioncontainer class="BoundaryConditionContainer"><boundarycondition class="BCS_Delaunay2D" id="0"><enabled>1</enabled>
+  <boundaryconditioncontainer class="BoundaryConditionContainer"><boundarycondition class="BCS_Delaunay2D" id="0"><enabled>0</enabled>
     <name>production</name>
     <color><r>170</r>
      <g>0</g>
@@ -473,7 +570,7 @@
      </tablerow>
     </flowratetable>
    </boundarycondition>
-   <boundarycondition class="BCS_Delaunay2D" id="1"><enabled>1</enabled>
+   <boundarycondition class="BCS_Delaunay2D" id="1"><enabled>0</enabled>
     <name>injection</name>
     <color><r>0</r>
      <g>0</g>
