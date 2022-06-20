@@ -1,0 +1,78 @@
+{
+    "boundaries": [], 
+    "initial": {
+      "region": 1, 
+      "primary": [
+        300e5, 160
+      ]
+    }, 
+    "title": "cho2015",  
+    "gravity": null, 
+    "eos": {
+      "name": "we", "temperature": 18.5
+    }, 
+    "thermodynamics": "ifc67", 
+    "mesh": {
+      "filename": "cho2015.msh",
+      "zones": {"all": {"-": null}}
+    }, 
+    "source": [
+      {
+        "cell": 1770, 
+        "rate": -102.22, 
+        "name": "producer"
+      },
+      {
+        "cell": 3570,
+        "rate": 102.22,
+        "enthalpy": 336.5e3
+      }
+    ], 
+    "rock": {
+      "types": [
+        {
+          "name": "dfalt", 
+          "density": 2769.0, 
+          "zones":["all"],
+          "specific_heat": 1000,
+          "dry_conductivity": 0,
+          "wet_conductivity": 0,
+          "porosity": 0.15,
+          "permeability": [125e-15, 125e-15, 125e-15]
+        }
+    ]
+    },
+    "time": {
+      "start": 0.0, 
+      "step": {
+        "size": 3600.0, 
+        "adapt": {
+          "on": true, 
+          "reduction": 0.2, 
+          "amplification": 2.0, 
+          "minimum": 5.0, 
+          "method": "iteration", 
+          "maximum": 8.0
+        }, 
+        "solver": {
+          "nonlinear": {
+            "tolerance": {
+              "function": {
+                "relative": 1e-06, 
+                "absolute": 1.0
+              }
+            }, 
+            "maximum": {
+              "iterations": 8
+            }
+          }
+        }, 
+        "maximum": {
+          "number": 150, 
+          "size": 1.5e7
+        }, 
+        "method": "beuler"
+      }, 
+      "stop": 1136073600
+    }
+  }

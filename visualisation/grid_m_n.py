@@ -1,3 +1,8 @@
+# usage python.exe grid_m_n.py pressure temperature (number of elements along x) (number of elements along y)
+# for example a grid which is 4000 m in x and 3500 m in y consists of 90 elements along x and 60 along y due to 50 m blocks
+# python.exe grid_m_n.py pressure temperature 90 60
+
+
 import h5py
 import matplotlib.pyplot as plt
 import sys
