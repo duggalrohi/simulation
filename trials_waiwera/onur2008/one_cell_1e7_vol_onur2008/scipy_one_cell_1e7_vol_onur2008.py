@@ -54,6 +54,7 @@ def Solve(P0, W, V, phi, c, alpha, t0, t1, nt):
     pyplot.clf()
     pyplot.plot(soln[:, 0], soln[:, 1])
     pyplot.show()
+    print('time',soln[:,0],'\nPressure',soln[:,1])
     
     
 P0 = 50.0e5
