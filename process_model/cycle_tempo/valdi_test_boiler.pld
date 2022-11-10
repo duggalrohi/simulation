@@ -1,0 +1,6 @@
+ &PARTLD NO=  1,DESVOL=   0.14687,LBLEED=  2,  4,
+    PBLEED=    1.51033,    5.00000,
+    VBLEED=    0.29715,    0.09016,
+    MBLEED=    1.62907,    1.62907,
+ &END
+ &PARTLD  NO=  2, KA=   59.0139    , DESMAS=   7.87165    , ETHA= 0.8 &END

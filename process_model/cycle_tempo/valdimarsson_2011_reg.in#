@@ -1,0 +1,30 @@
+Description
+ &CYCLE 	NAPP=6, NLIN=6, NCYCLE=2, IF=97, NPRINT=4  &END
+ &SYSTEM	SYSTYP='OPEN','OPEN'  &END
+ &APDATA	NO=1, TYPE=6, APNAME='Heat Exchgr.', DELP1=0, TOUT1=  170, 
+		DELP2=0, TOUT2=  100, DELTL=  5  &END
+ &APDATA	NO=2, TYPE=6, APNAME='Heat Exchgr.', DELP1=0, DELP2=0, 
+		TOUT2=  25, DELTL=  5  &END
+ &APDATA	NO=3, TYPE=10, APNAME='Sink/Source', POUT=  10, TOUT=  180.7, 
+		DELM=  48  &END
+ &APDATA	NO=4, TYPE=10, APNAME='Heat Sink', SUBTYP=1  &END
+ &APDATA	NO=5, TYPE=10, APNAME='Sink/Source', POUT=  5, TOUT=  140, 
+		DELM=  10  &END
+ &APDATA	NO=6, TYPE=10, APNAME='Heat Sink', SUBTYP=1  &END
+1	3	1  	12   	2
+2	1	2  	32   	2
+3	2	4  	31   	2
+4	5	2  	11   	1
+5	2	1  	11   	1
+6	1	6  	11   	1
+ &MEDIUM	PIPE=4, TYPE='FLUIDPR', 
+		MODEL='freeStanMix', SPECIE='Isopentane'  &END
+ &MEDIUM	PIPE=5, TYPE='FLUIDPR', 
+		MODEL='freeStanMix', SPECIE='Isopentane'  &END
+ &MEDIUM	PIPE=6, TYPE='FLUIDPR', 
+		MODEL='freeStanMix', SPECIE='Isopentane'  &END
+ &MEDIUM	PIPE=1, TYPE='WATERSTM'  &END
+ &ENVIRN	PRESS=1.01325, TEMP=15.00, HEAVAL=0, 
+		  &END
+
+ @ EOF DS

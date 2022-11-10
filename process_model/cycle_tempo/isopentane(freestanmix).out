@@ -1,0 +1,321 @@
+
+
+
+
+
+
+
+
+                    CCC   Y     Y   CCC    L       EEEEE       TTTTT   EEEEE   M     M   PPPP     OOOO
+                   C   C   Y   Y   C   C   L       E             T     E       MM   MM   P   P   O    O
+                   C        Y Y    C       L       E             T     E       M M M M   P   P   O    O
+                   C         Y     C       L       EEEEE   ===   T     EEEEE   M  M  M   PPPP    O    O
+                   C         Y     C       L       E             T     E       M     M   P       O    O
+                   C   C     Y     C   C   L       E             T     E       M     M   P       O    O
+                    CCC      Y      CCC    LLLLL   EEEEE         T     EEEEE   M     M   P        OOOO
+
+
+
+
+
+
+                   Cycle-Tempo :  Thermodynamic Energysystems, Massflow calculation for POwerprocesses 
+
+
+
+
+
+                   Asimptote BV                             
+
+                   De Schans 23                             
+
+                   5473 PH Heeswijk-Dinther, The Netherlands
+
+
+                   E-mail address: info@asimptote.com       
+
+
+
+                   Cycle-Tempo Release 5.1.6                
+
+                   Calculation Kernel Build 1806181         
+
+
+
+                   Problem name        :  c:\users\duggalrohi\onedrive - victoria university of wellington - student\wai_sim\process_model\isopentan
+(freestanmix)
+
+                   Problem description :  Description
+
+
+                   System time         :  19:16:53
+
+                   System date         :  23/03/2022
+
+	
+CONFIGURATION OF THE INSTALLATION
+================================= 
+
+
+NUMBER OF APPARATUS               NAPP =  10
+NUMBER OF PIPES (LINKS)           NLIN =  10
+NUMBER OF THERMAL CYCLES        NCYCLE =   3
+TOTAL NUMBER OF TURBINES         NTURB =   1
+NUMBER OF TURBINE DRIVEN PUMPS    NTDP =   0
+NUMBER OF ABSORTION CYCLES      NABSOR =   0
+NUMBER OF GENERATORS            NUMGEN =   1
+NUMBER OF PRODUCTION FUNCTIONS  NPRODF =   1
+LOAD CONDITION CODE             NDLOAD =   0    =0: DESIGN LOAD RUN
+                                               >0: PART LOAD RUN, NDLOAD=NUMBER OF PARTLOAD CONDITIONS (&PARTLD)
+DESIGN LOAD FACTOR              DFACTR =1.000000
+OUTPUT CONTROL CODE             NPRINT =   4
+     0=EXTENSIVE OUTPUT
+     1=ALSO PUNCH PARTLOAD DATA
+     2=COMPREHENSIVE OUTPUT
+     3=MORE COMPREHENSIVE OUTPUT
+     4=SHORTENED OUTPUT
+ADDITIONAL OUTPUT CONTROL CODE    NXXX =   0
+NUMBER OF TRACED APPARATUS      NTRACE =  10
+
+MIN. NUMBER OF MAIN ITERATIONS  MINITM =   0
+MAX. NUMBER OF MAIN ITERATIONS  MAXITM =  25
+ADD. NUMBER OF MAIN ITERATIONS  MORITM =   0
+UNDERRELAXATION INHIBITED AFTER  MAXUR =  25 STEPS
+ACCURACY FOR ITERATION             EPS =0.000100
+ELECTRICAL FREQUENCY              FREQ = 50.0 HZ
+
+STORAGE USED FOR GENERAL COMMON AREA   =  10730 WORDS OF 4 BYTES
+
+
+State functions for water/steam calculations:
+  IAPWS Industrial Formulation 1997 (IAPWS-IF97)
+
+	
+
+NUMBER OF EQUATIONS
+====================
+
+NUMBER OF PRIMARY MASS EQUATIONS    =  7 NUMBER OF APPARATUS 10 MINUS SINKS WITHOUT MASS EQUATION  3
+
+NUMBER OF SECONDARY MASS EQUATIONS  =  2 NUMBER OF TWO MEDIA APPARATUS TYPES 4,5,6,12,20,21,22,23
+
+NUMBER OF PRESCRIBED MASS EQUATIONS  =  0 NUMBER OF TYPES 14,21,25,26,28 AND FOR CERTAIN CONDITIONS: 13,20,22,23
+
+NUMBER OF AUTOMATIC ENERGY EQUATIONS =  1 NUMBER OF TYPES 5,7,11,15 AND IF EEQCOD EQUALS 1: 4,20,21,22,23
+
+NUMBER OF EXPLICIT ENERGY EQUATIONS  =  1 NUMBER OF PRODUCTION FUNCTIONS
+
+MINUS THE NUMBER OF CLOSED CYCLES    =  1 (NUMBER OF OPEN CYCLES =  2)
+
+PLUS THE NUMBER OF ABSORPTION CYCLES =  0
+
+                       MAKES TOGETHER  10 AND NLIN =  10
+                       ---------------------------------
+
+	
+
+Cycle-Tempo iteration   0:
+--------------------------
+
+Cycle-Tempo iteration   1:
+--------------------------
+	
+Main iteration convergence data 
+=============================== 
+
+--------------------------------------------------------------------
+|     |                         Massflows                          |
+|Iter.|------------------------------------------------------------|
+| no. | num. pipes   maximum     pipe max.   maximum     pipe max. |
+|     | no conver.   abs. dev.   abs. dev.   rel. dev.   rel. dev. |
+|-----|------------------------------------------------------------|
+|   1 |      0      0.878E-11         5     0.662E-13         5    |
+--------------------------------------------------------------------
+
+Convergence reached in   1 iterations.
+--------------------------------------
+  Absolute deviation massflow:
+    Criterion absolute deviation:     < 0.100E-11
+    Max absolute deviation in pipe   5: 0.878E-11
+    Relative deviation in this pipe:    0.662E-13
+  Relative deviation massflow:
+    Criterion relative deviation:     < 0.100E-03
+    Max relative deviation in pipe   5: 0.662E-13
+    Absolute deviation in this pipe:    0.878E-11
+
+	
+     SYSTEM EFFICIENCIES, POWER INPUT AND OUTPUT
+     ===========================================
+
+     -----------------------------------------------------------------------
+     |             ||  NO  APPARATUS     TYPE |   ENERGY        TOTALS     |
+     |             ||                         |    [kW]          [kW]      |
+     |=====================================================================|
+     |---------------------------------------------------------------------|
+     | DELIVERED   ||   1  GENERATOR          |      1000.00               | 
+     | GROSS POWER ||                         |                    1000.00 | 
+     |---------------------------------------------------------------------|
+     | AUX.POWER   ||   3  Pump            8  |        27.14               | 
+     | CONSUMPTION ||   8  Pump            8  |        19.61               | 
+     |             ||   9  Pump            8  |         4.14               | 
+     |             ||                         |                      50.89 | 
+     |---------------------------------------------------------------------|
+     | DELIVERED   ||                         |                            | 
+     | NET POWER   ||                         |                     949.11 | 
+     |---------------------------------------------------------------------|
+     | DELIVERED   ||   7  Heat Sink      10  |     19437.02               | 
+     | HEAT        ||  11  Heat Sink      10  |      1928.95               | 
+     |             ||                         |                   21365.97 | 
+     |---------------------------------------------------------------------|
+     | TOTAL       ||                         |                            | 
+     | DELIVERED   ||                         |                   22315.08 | 
+     -----------------------------------------------------------------------
+	
+ENERGY BALANCE OF THE SYSTEM
+============================
+
+
+DEFINITION OF TOTAL ENERGY
+Def. 1: Enthalpy minus enthalpy by environmental
+        conditions (water as LIQUID) plus HIGHER heating value
+Def. 2: Enthalpy minus enthalpy by environmental
+        conditions (water as VAPOUR) plus LOWER heating value
+
+
+                                         POWER / HEAT TRANSMITTED FROM APPARATUS
+
+   NO    APPARATUS    TYPE      BASED ON ENTHALPY      BASED ON TOTAL ENERGY FLOWS [MW]
+                                FLOWS [MW]             DEFINITION 1          DEFINITION 2
+
+    1    Turbine        3             1.000                 1.000                 1.000
+    2    Condenser      4             0.000                 0.000                -0.000
+    4    Heat Exchgr.   6           -20.855               -20.855               -20.855
+    3    Pump           8            -0.023                -0.023                -0.023
+    8    Pump           8            -0.017                -0.017                -0.017
+    9    Pump           8            -0.003                -0.003                -0.003
+    6    Sink/Source   10            -5.592                 8.339               332.508
+    7    Heat Sink     10            33.368                19.437              -304.732
+   10    Sink/Source   10           -10.857                -9.807                14.610
+   11    Heat Sink     10             2.978                 1.929               -22.488
+                               -------------- +      -------------- +      -------------- +
+      TOTAL TRANSMITTED :             0.000                 0.000                 0.000
+
+
+APPLIED FLUIDS (TPSI, freeStanMix, RefProp, PCP-SAFT)
+=====================================================
+
+MEDIUM TYPE  |  APPLIED FLUID / COMPOSITION
+
+freeStan-    |  Isopentane
+	
+
+DATA FOR ALL PIPES; SUBSEQUENTLY INLET AND OUTLET
+=================================================
+
+
+PIPE  MEDIUM     |     MASS-FLOW  MOLE-FLOW  VOL-FLOW  |  PRESSURE   TEMPERATURE  ENTHALPY   ENTROPY   QUALITY   MASSFR
+  NO  TYPE       |      [kg/s]    [kmol/s]    [m3/s]   |   [bar]        [°C]      [kJ/kg]   [kJ/kgK]  [%-VAPOUR]  [-]  
+
+
+   1  WATERSTM   |       10.000     0.55509    0.01250 |    50.000      250.00    1085.66    2.7909       0.00
+                 |                             0.01250 |    50.000      250.00    1085.66    2.7909       0.00
+   2  freeStan-1 |       59.026     0.81812     8.5510 |    3.1266      140.49     214.80    0.4813     100.00   1.0000
+                 |                              8.5510 |    3.1266      140.49     214.80    0.4813     100.00   1.0000
+   3  freeStan-1 |       59.026     0.81812    0.09891 |    3.1266       65.01    -255.50   -0.8637       0.00   1.0000
+                 |                             0.09891 |    3.1266       65.01    -255.50   -0.8637       0.00   1.0000
+
+   4  WATERSTM   |       10.000     0.55509    0.01250 |    52.000      250.07    1085.97    2.7910       0.00
+                 |                             0.01250 |    52.000      250.07    1085.97    2.7910       0.00
+   5  WATERSTM   |       132.76      7.3695    0.13280 |    1.0000       10.00      42.12    0.1511       0.00
+                 |                             0.13280 |    1.0000       10.00      42.12    0.1511       0.00
+   6  WATERSTM   |       132.76      7.3695    0.13280 |    2.0000       10.01      42.24    0.1512       0.00
+                 |                             0.13280 |    2.0000       10.01      42.24    0.1512       0.00
+
+   7  WATERSTM   |       132.76      7.3695    0.13502 |    2.0000       60.01     251.33    0.8312       0.00
+                 |                             0.13502 |    2.0000       60.01     251.33    0.8312       0.00
+   8  WATERSTM   |       10.000     0.55509    0.01020 |    52.000       70.14     297.82    0.9536       0.00
+                 |                             0.01020 |    52.000       70.14     297.82    0.9536       0.00
+   9  freeStan-1 |       59.026     0.81812    0.09883 |    5.0000       65.14    -255.10   -0.8635       0.00   1.0000
+                 |                             0.09883 |    5.0000       65.14    -255.10   -0.8635       0.00   1.0000
+
+  10  freeStan-1 |       59.026     0.81812     5.3216 |    5.0000      150.00     231.74    0.4711     100.00   1.0000
+                 |                              5.3216 |    5.0000      150.00     231.74    0.4711     100.00   1.0000
+	
+ROTATING EQUIPMENT 
+================== 
+
+  NO    APPARATUS    TYPE     ISENTROPIC        MECHANICAL          EXHAUST
+                              EFF. [%]          EFF. [%]            LOSSES [kJ/kg]
+
+   1    Turbine        3      80.00  input      100.00  default
+   3    Pump           8      80.00  input      100.00  fixed  
+   8    Pump           8      80.00  input      100.00  fixed  
+   9    Pump           8      80.00  input      100.00  fixed  
+
+
+MOTORS AND GENERATORS 
+===================== 
+
+  NO    APPARATUS    TYPE     MECHANICAL        ELECTRICAL        BOTH
+                              EFF. [%]          EFF. [%]           [%]
+
+   1    GENERATOR                                               100.00  input  
+   3    Pump           8                                         85.32  calc.  
+   8    Pump           8                                         84.66  calc.  
+   9    Pump           8                                         75.41  calc.  
+
+
+HEAT EXCHANGING EQUIPMENT
+=========================
+
+                               HEAT TRANSMITTED    HIGH TERMINAL     LOW TERMINAL        FLOW-
+  NO    APPARATUS    TYPE        IN APPARATUS     TEMP DIFFERENCE   TEMP DIFFERENCE    DIRECTION
+                                    [kJ/s]             [°C]              [°C]
+
+   2    Condenser      4          27759.52              5.00             55.00          Counter 
+   4    Heat Exchgr.   6          28736.37            100.07              5.00          Counter 
+	
+
+
+==========================================
+=                                        =
+=     APPARATUSES IN OFF-DESIGN MODE     =
+=                                        =
+==========================================
+
+NO TURBINES, COMPRESSORS OR HEAT EXCHANGERS PRESENT IN OFF-DESIGN MODE
+======================================================================
+
+
+======================================
+=                                    =
+=     APPARATUSES IN DESIGN MODE     =
+=                                    =
+======================================
+
+
+DESIGN DATA FOR TURBINES
+========================
+
+
+TURBINE NR.   1
+===============
+
+NUMBER OF CONNECTED PIPES =  2
+INLET VOLUME-FLOW =   5.3216 m3/s
+
+PIPE         PRESSURE           SPEC.VOLUME              TURBINE MASSFLOW
+ NR             [bar]              [m3/kg]                  [kg/s]
+
+   2           3.1266               0.14487                59.0263  OUTLET
+  10           5.0000               0.09016                59.0263  INLET
+  
+
+DESIGN DATA FOR HEAT EXCHANGERS
+===============================
+
+NUMBER OF     TERMINAL TEMP. DIFFERENCE     FACTOR       MASS FLOW
+APPARATUS        HIGH           LOW           U*A           RATE
+
+    2            5.00           55.00       1331.28       132.763    
+    4          100.07            5.00       905.749       59.0263    
