@@ -44,3 +44,48 @@ fprintf('Turbine work output: %f J/s\n', W_turbine);
 fprintf('Pump work input: %f J/s\n', W_pump);
 fprintf('Net work output: %f J/s\n', W_net);
 fprintf('Thermal efficiency: %f\n', eta_th);
+
+% Define the heat transfer rate
+Q = 1e6; % Heat transfer rate (W)
+
+% Define the temperature difference between the hot and cold streams
+deltaT = 50; % Temperature difference (K)
+
+% Define the heat transfer coefficient
+U = 500; % Heat transfer coefficient (W/m^2-K)
+
+% Calculate the heat transfer area
+A = Q / (U * deltaT);
+
+% Print the result
+fprintf('Heat transfer area: %f m^2\n', A);
+
+
+% Define the mass flow rate and specific heat capacity of the cold stream
+m_dot_c = 1; % Mass flow rate (kg/s)
+c_p_c = 4.2; % Specific heat capacity (J/kg-K)
+
+% Define the temperature difference between the cold stream inlet and outlet
+deltaT_c = 20; % Temperature difference (K)
+
+% Define the mass flow rate and specific heat capacity of the hot stream
+m_dot_h = 2; % Mass flow rate (kg/s)
+c_p_h = 2.1; % Specific heat capacity (J/kg-K)
+
+% Define the temperature difference between the hot stream inlet and outlet
+deltaT_h = 30; % Temperature difference (K)
+
+% Calculate the heat transfer rate
+Q = m_dot_c * c_p_c * deltaT_c + m_dot_h * c_p_h * deltaT_h;
+
+% Define the temperature difference between the hot and cold streams
+deltaT = deltaT_h - deltaT_c;
+
+% Define the heat transfer coefficient
+U = 500; % Heat transfer coefficient (W/m^2-K)
+
+% Calculate the heat transfer area
+A = Q / (U * deltaT);
+
+% Print the result
+fprintf('Heat transfer area: %f m^2\n', A);
