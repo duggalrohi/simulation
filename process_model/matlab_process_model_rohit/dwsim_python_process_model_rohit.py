@@ -1,0 +1,18 @@
+import dwsim
+model = dwsim.Model()
+pump = model.add_component('Pump', 'Pump1')
+heater = model.add_component('HeatExchanger', 'Heater1')
+turbine = model.add_component('Turbine', 'Turbine1')
+condenser = model.add_component('Condenser', 'Condenser1')
+inlet_stream = model.add_stream(pump, heater)
+outlet_stream = model.add_stream(heater, turbine)
+condenser_stream = model.add_stream(turbine, condenser)
+
+model.set_stream_property(inlet_stream, 'FlowRate', 1.0)
+model.set_stream_property(inlet_stream, 'Pressure', 100000.0)
+model.set_stream_property(inlet_stream, 'Temperature', 300.0)
+model.set_property('WorkingFluid', 'Name', 'Isopentane')
+model.set_property('WorkingFluid', 'MolecularWeight', 72.15)
+model.set_property('WorkingFluid', 'CriticalTemperature', 419.53)
+model.set_property('WorkingFluid', 'CriticalPressure', 4.188e6)
+model.set_property('WorkingFluid', 'CriticalVolume', 0.00002847)

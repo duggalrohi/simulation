@@ -179,3 +179,21 @@ print("Thermal efficiency of ORC: {:.2f}".format(eta))
 
 
 
+import scipy.optimize as optimize
+
+def turbine_power_and_mass_flow(input_parameters):
+  # Calculate turbine power and mass flow rate of isopentane using input parameters
+  turbine_power = ...
+  mass_flow_rate = ...
+  return (turbine_power, mass_flow_rate)
+
+initial_parameters = [0.1, 0.2, 0.3] # Initial values for input parameters
+
+# Use minimize() function to find input parameters that maximize turbine power and minimize mass flow rate
+result = optimize.minimize(turbine_power_and_mass_flow, initial_parameters, options={'disp': True})
+
+# Print final values for input parameters
+print(result.x)
+
+
+
