@@ -197,3 +197,22 @@ print(result.x)
 
 
 
+
+import scipy.optimize as optimize
+
+def heat_exchanger_size(input_parameters):
+  # Calculate heat transfer rate and surface area of heat exchanger using input parameters
+  heat_transfer_rate = ...
+  surface_area = ...
+  return (heat_transfer_rate, surface_area)
+
+initial_parameters = [0.1, 0.2, 0.3] # Initial values for input parameters
+desired_heat_transfer_rate = 100.0 # Desired heat transfer rate
+
+# Use minimize() function to find input parameters that minimize surface area while meeting desired heat transfer rate
+result = optimize.minimize(heat_exchanger_size, initial_parameters, args=(desired_heat_transfer_rate), options={'disp': True})
+
+# Print final values for input parameters
+print(result.x)
+
+
